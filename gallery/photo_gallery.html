@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Forrest Connelly">
+        <title>Ethical Hacking - Photo Gallery</title>
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/slicknav.css">
+        <link rel="stylesheet" href="gallery.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../js/jquery.slicknav.min.js"></script>
+        <script src="gallery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html"><img src="../images/logo.png" alt="Dakota State University Logo" ></a>
+            <h2>Ethical Hacking</h2>
+        </header>
+
+        <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="../index.html" class="current">Home</a></li>
+                <li><a href="#">Fields of Study</a>
+                    <ul>
+                        <li><a href="../study/physical_hacking.html">Physical Hacking</a></li>
+                        <li><a href="../study/social_engineering.html">Social Engineering</a></li>
+                        <li><a href="../study/programming.html">Programming</a></li>
+                        <li><a href="../study/exploitation.html">Exploitation</a></li>
+                        <li><a href="../study/osint.html">OSINT</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Major Conferences</a>
+                    <ul>
+                        <li><a href="../conferences/conferences_this_month.html">Upcoming Events</a></li>
+                        <li><a href="https://www.defcon.org/" target="_blank" rel="noopener noreferrer">Def Con</a></li>
+                        <li><a href="https://www.blackhat.com/" target="_blank" rel="noopener noreferrer">Black Hat</a></li>
+                        <li><a href="https://www.rsaconference.com/en" target="_blank" rel="noopener noreferrer">RSA Conference</a></li>
+                    </ul>
+                </li>
+                <li><a href="photo_gallery.html">Gallery</a></li>
+                <li><a href="../contact/contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>Images related to hacking</h1>
+            <img id="image" src="../images/img1.jpg" alt="Rob Honomichl">
+            <div id="carousel">
+                <div id="left_button" class="button_panel"><button><</button></div>
+                <div id="display_panel"> 
+                    <ul id="image_list">
+                        <li><a href="../images/img1.jpg"><img src="../images/img1.jpg" alt="Hacker Laptop"></a></li>
+                        <li><a href="../images/img2.jpg"><img src="../images/img2.jpg" alt="Terminal listing files"></a></li>
+                        <li><a href="../images/img3.jpg"><img src="../images/img3.jpg" alt="Guy Fawkes Mask"></a></li>
+                        <li><a href="../images/img4.jpg"><img src="../images/img4.jpg" alt="Matrix symbols raining"></a></li>
+                        <li><a href="../images/img5.jpg"><img src="../images/img5.jpg" alt="Fingerprint Lock"></a></li>
+                        <li><a href="../images/img6.jpg"><img src="../images/img6.jpg" alt="Programming Language code"></a></li>
+                        <li><a href="../images/img7.jpg"><img src="../images/img7.jpg" alt="Monitor with gun"></a></li>
+                        <li><a href="../images/img8.jpg"><img src="../images/img8.jpg" alt="Robber stealing credit card information"></a></li>
+                        <li><a href="../images/img9.jpg"><img src="../images/img9.jpg" alt="Magnifying Glass finding the word password from binary numbers"></a></li>
+                    </ul>
+                </div>
+                <div id="right_button" class="button_panel"><button>></button></div>
+            </div>
+        </main>
+
+        <footer>
+		    <br>&copy; 2021 Forrest Connelly - Dakota State University<br>
+            Directly contact us at <a href="mailto:forrest.connelly@trojans.dsu.edu?subject=More information on Ethical Hacking">forrest.connelly@trojans.dsu.edu</a><br>
+            Icons made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> and <a href="https://www.flaticon.com/authors/photo3idea-studio" title="photo3idea_studio">photo3idea_studio</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br><br>
+	    </footer>
+    </body>
+</html>

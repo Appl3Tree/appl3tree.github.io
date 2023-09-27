@@ -1,0 +1,110 @@
+main {
+    margin-bottom: 25px;
+    padding: 0 25px;
+}
+h1 {
+    text-align: center;
+}
+
+aside {
+    width: 25%;
+    float: left;
+}
+aside a, aside a:visited {
+    color: rgb(197, 168, 128);
+}
+aside a:focus, aside a:hover {
+    color: rgb(83, 46, 28);
+}
+aside ul {
+    line-height: 1.5;
+}
+
+#sidebarB, #sidebarC {
+    border: 5px solid rgb(197, 168, 128);
+    box-shadow: 5px 5px 5px rgb(83, 46, 28);
+    border-radius: 5px;
+    width: 30%;
+    margin-top: 15px;
+    margin-left: 25px;
+    background-color: rgb(131, 82, 57);
+    padding: 15px;
+}
+
+#sidebarC {
+    clear: right;
+    margin-bottom: 25px;
+}
+
+section a, section a:visited {
+    color: rgb(83, 46, 28);
+}
+section a:focus, section a:hover {
+    color: darkgray;
+}
+
+section {
+    text-indent: 15px;
+    float: left;
+    width: 33%;
+    padding-left: 25px;
+}
+
+#section3~ul li {
+    list-style-type: lower-alpha;
+}
+
+@media only screen and (max-width: 888px) {
+    section {
+        width: 30%;
+    }
+    #sidebarB, sidebarC {
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 722px) {
+    section {
+        width: 65%;
+    }
+    #sidebarB {
+        clear: both;
+    }
+    #sidebarB, #sidebarC {
+        width: 35%;
+    }
+    aside {
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    aside:first-of-type {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+        border: 5px solid rgb(197, 168, 128);
+        border-radius: 5px;
+        box-shadow: -5px 5px 5px rgb(83, 46, 28);
+    }
+    aside:first-of-type li {
+        list-style-type: none;
+    }
+    aside:first-of-type ul {
+        padding: 0;
+    }
+    section {
+        width: 90%;
+        padding-right: 25px;
+    }
+    #section3~ul {
+        padding-left: 60px;
+    }
+    
+}
+
+@media only screen and (max-width: 536px) {
+    #sidebarB, #sidebarC {
+        display: none;
+    }
+}
