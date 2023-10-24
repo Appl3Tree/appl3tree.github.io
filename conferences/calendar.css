@@ -1,0 +1,55 @@
+h1 {
+    color: rgb(83, 46, 28);
+    margin-bottom: .25em;
+    text-align:center;
+}
+
+#month_year {
+    display: inline-block;
+    min-width: 250px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid rgb(15, 15, 15);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+td {
+    min-width: 4em;
+    max-width: 10em;
+    height: 4em;
+    vertical-align: top;
+    padding: 5px 0 0 5px;
+    border: 1px solid rgb(83, 46, 28);
+}
+
+th {
+    padding:10px;
+}
+
+td.today {
+    background-color: rgb(197, 168, 128);
+}
+
+@media only screen and (max-width: 650px) {
+    td {
+        min-width: 2em;
+        max-width: 5em;
+    }
+    h1 {
+        font-size: 80%;
+    }
+    tr, td {
+        font-size: 60%;
+        height: 4em;
+    }
+    th {
+        font-size: 60%;
+    }
+    #month_year {
+        min-width: 150px;
+    }
+}
+
