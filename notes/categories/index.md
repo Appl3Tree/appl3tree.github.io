@@ -25,5 +25,5 @@ Test2
   </ul>
 {% endfor %}
 {% for cat in site.categories %}
-  {{cat}} : {{ cat | size }}
+  {{cat[0]}} : {{ cat[0] | size }}
 {% endfor %}
