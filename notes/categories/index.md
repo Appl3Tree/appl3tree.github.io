@@ -12,6 +12,7 @@ category: ignore
   {% assign sorted_posts = site.posts | sort %}
   {% for post in sorted_posts %}
     {% if post.category == cat[0] %}
+      <p>Number of posts: {% site.categories.cat[0] | size %}</p>
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
