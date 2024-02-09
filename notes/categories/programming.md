@@ -17,8 +17,5 @@ tags: C Python C++ C# Bash Powershell
       {% endif %}
     {% endif %}
   {% endfor %}
+  </ul>
 {% endfor %}
-</ul>
-{% endfor %}
-{% endfor %}
-
