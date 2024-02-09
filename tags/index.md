@@ -8,5 +8,5 @@ permalink: /tags
   <hr />
   {% for post in site.posts %}
     {% if post.tags contains tag[0] %}
-    <ul><a href="{{ post.url }}">{{ post.title}}</a></ul>
+    <ul><a href="{{ post.url }}">{{ post.title }}</a></ul>
 {% endfor %}
