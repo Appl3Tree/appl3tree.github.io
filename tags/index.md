@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Programming
+title: Tags
 permalink: /tags
 ---
 {% assign sorted_tags = site.tags | sort %}
