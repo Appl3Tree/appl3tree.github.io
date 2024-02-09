@@ -7,9 +7,9 @@ category: ignore
 {% for post in site.posts %}
   {% assign existing_cats = existing_cats | push: site.category %}
 {% endfor %}
-
+Test
 <h1>{{ existing_cats }}</h1>
-
+Test2
 {% assign sorted_cats = existing_cats | sort %}
 {% for cat in sorted_cats %}
   <h3>{{ cat[0] }}</h3>
