@@ -1,6 +1,5 @@
----
-title: Welcome to my notes. Good luck
----
+# Welcome to my notes. Good luck
+_____
 
 Some example notes:
 * Note 1
