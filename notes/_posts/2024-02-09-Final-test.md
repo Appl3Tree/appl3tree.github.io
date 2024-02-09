@@ -1,7 +1,7 @@
 ---
 title: test3
 date: 2024-02-09
-category: Test Category
+category: Malware Analysis
 tags: Python C C++ C# Bash Powershell
 ---
 
