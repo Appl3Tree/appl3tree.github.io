@@ -1,6 +1,5 @@
 ---
 title: Tags
-permalink: /notes/tags
 ---
 {% assign sorted_tags = site.tags | sort %}
 {% for tag in sorted_tags %}
