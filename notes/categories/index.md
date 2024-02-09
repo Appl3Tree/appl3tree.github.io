@@ -3,27 +3,7 @@ title: Categories
 category: ignore
 ---
 
-{% assign existing_cats = "" | split: ',' %}
-{% for post in site.posts %}
-  {% assign existing_cats = existing_cats | push: post.category %}
-{% endfor %}
-Test
-<h1>{{ existing_cats }}</h1>
-Test2
-{% assign sorted_cats = existing_cats | sort %}
-{% for cat in sorted_cats %}
-  <h3>{{ cat[0] }}</h3>
-  <hr />
-  
-  <ul>
-  {% assign sorted_posts = site.posts | sort %}
-  {% for post in sorted_posts %}
-    {% if post.category == cat[0] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-{% endfor %}
+{{ site.categories }}
 {% for cat in site.categories %}
-  {{cat[0]}} : {{ cat[0] | size }}
+  {{ cat[0] }}
 {% endfor %}
