@@ -5,9 +5,6 @@ category: ignore
 {% assign sorted_cats = site.categories | sort %}
 {% for cat in sorted_cats %}
   {% assign num_posts = site.categories.cat[0] | size %}
-  {% if num_posts < 1 %}
-    {% continue %}
-  {% endif %}
   <h3>{{ cat[0] }}</h3>
   <hr />
   
