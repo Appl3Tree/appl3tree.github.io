@@ -4,5 +4,5 @@ title: Programming
 permalink: /tags
 ---
 {% for tag in site.tags %}
-  {{ tag }}
+  {{ tag.name }}
 {% endfor %}
