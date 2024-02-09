@@ -6,10 +6,11 @@ category: ignore
 {% for post in site.posts %}
   {% assign existing_cats = existing_cats | push: site.category
 {% endfor %}
+
 <h1>{{ existing_cats }}</h1>
+
 {% assign sorted_cats = existing_cats | sort %}
 {% for cat in sorted_cats %}
-  {% assign num_posts = site.categories.cat[0] | size %}
   <h3>{{ cat[0] }}</h3>
   <hr />
   
