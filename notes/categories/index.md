@@ -5,7 +5,7 @@ category: ignore
 
 {% assign existing_cats = "" | split: "," %}
 {% for post in site.posts %}
-  %{ assign existing_cats = existing_cats | push: post.category %}
+  {% assign existing_cats = existing_cats | push: post.category %}
 {% endfor %}
 {% assign sorted_cats = existing_cats | sort %}
 
