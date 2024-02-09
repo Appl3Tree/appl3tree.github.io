@@ -5,7 +5,7 @@ tags: C Python C++ C# Bash Powershell
 ---
 {% assign sorted_tags = site.tags | sort %}
 {% for tag in page.tags %}
-  <h3>{{ tag }}</h3>
+  <h3>{{ tag[0] }}</h3>
   <hr />
 
   <ul>
