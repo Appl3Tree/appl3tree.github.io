@@ -5,8 +5,8 @@ category: ignore
 
 {% assign sorted_tags = site.tags | sort %}
 |-----|
-{% for tag in sorted_tags %}
-  |{% tag[0] %}|
+{% for tag0 in sorted_tags %}
+  |{% tag0[0] %}|
 {% endfor %}
 
 {% for tag in sorted_tags %}
