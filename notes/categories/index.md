@@ -2,9 +2,10 @@
 title: Categories
 category: ignore
 ---
+
 {% assign existing_cats = "" | split "," %}
 {% for post in site.posts %}
-  {% assign existing_cats = existing_cats | push: site.category
+  {% assign existing_cats = existing_cats | push: site.category %}
 {% endfor %}
 
 <h1>{{ existing_cats }}</h1>
