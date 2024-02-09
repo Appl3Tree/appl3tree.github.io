@@ -1,8 +1,17 @@
 ---
-title: test3
+title: Template
 date: 2024-02-09
-categories: Malware-Analysis Dynamic-Analysis Reverse-Engineering Debugging
-tags: Python C C++ C# Bash Powershell
+category: ignore
 ---
 
-I think I'm done with this.
+```
+Filename: YYYY-MM-DD-Title.md
+
+v Body v
+---
+title: <title>
+date: YYYY-MM-DD
+category: <category>
+tags: <tags, space-delimited>
+---
+```
