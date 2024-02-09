@@ -2,13 +2,19 @@
 title: Tags
 category: ignore
 ---
-
+{% assign ignore_tags = "ignore" | split: "," %}
 {% assign sorted_tags = site.tags | sort %}
 {% for tag in sorted_tags %}
+  {% if ignore_tags contains tag %}
+    {% continue %}
+  {% endif %}
   <a href="#{{ tag[0] }}">{{ tag[0] }}</a>
 {% endfor %}
 
 {% for tag in sorted_tags %}
+  {% if ignore_tags contains tag %}
+    {% continue %}
+  {% endif %}
   <h3 id="{{ tag[0] }}">{{ tag[0] }}</h3>
   <hr />
   
