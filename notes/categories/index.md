@@ -10,7 +10,7 @@ category: ignore
   <ul>
   {% assign sorted_posts = site.posts | sort %}
   {% for post in sorted_posts %}
-    {% if post.categories contains tag[0] %}
+    {% if post.category == cat[0] %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
