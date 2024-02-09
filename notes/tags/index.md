@@ -3,8 +3,13 @@ title: Tags
 category: ignore
 ---
 {% assign sorted_tags = site.tags | sort %}
+|---|
 {% for tag in sorted_tags %}
-  <h3>{{ tag[0] }}</h3>
+  |{% tag[0] %}|
+{% endfor %}
+
+{% for tag in sorted_tags %}
+  <h3 id="{{ tag[0] }}">{{ tag[0] }}</h3>
   <hr />
   
   <ul>
