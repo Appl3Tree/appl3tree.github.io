@@ -1,5 +1,6 @@
 ---
 title: Categories
+category: ignore
 ---
 
 {% assign sorted_cats = site.categories | sort %}
