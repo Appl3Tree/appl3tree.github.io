@@ -4,9 +4,8 @@ category: ignore
 ---
 
 {% assign sorted_tags = site.tags | sort %}
-|-----|
 {% for tag in sorted_tags %}
-  | <a href="#{{ tag[0] }}">{{ tag[0] }}</a> |
+  <a href="#{{ tag[0] }}">{{ tag[0] }}</a>
 {% endfor %}
 
 {% for tag in sorted_tags %}
