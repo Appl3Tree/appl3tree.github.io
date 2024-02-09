@@ -8,5 +8,5 @@ category: ignore
   {% if cat[0] == 'ignore' %}
     {% continue %}
   {% endif %}
-  <a href="{{ cat[0] }}.md">{{ cat[0] }}</a>
+  <a href="{{ cat[0] }}">{{ cat[0] }}</a>
 {% endfor %}
