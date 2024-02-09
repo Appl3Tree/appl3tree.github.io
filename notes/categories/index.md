@@ -8,7 +8,7 @@ category: ignore
   {% assign existing_cats = existing_cats | push: post.category %}
 {% endfor %}
 {% assign sorted_cats = existing_cats | sort %}
-
+{% existing_cats %}
 {% for cat in sorted_cats %}
   <h3>{{ cat[0] }}</h3>
   <hr />
