@@ -1,10 +1,7 @@
 ---
 layout: default
 ---
-# Index
-_____
-{% for post in site.posts %}
-  <h3><a href="https://appl3tree.github.io/notes{{ post.url }}">{{ post.title }}</a></h3>
-  <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> - {{ post.category }}</small></p>
+{% assign sorted_cats = site.categories | sort %}
+{% for cat in sorted_cats %}
+  <a href="categories/{{ cat[0] }}.md">{{ cat[0] }}</a>
 {% endfor %}
-_____
