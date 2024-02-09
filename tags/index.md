@@ -5,5 +5,5 @@ permalink: /tags
 ---
 {% for tag in site.tags %}
   {{ tag.tag-name }}
-  Test
+  Test2
 {% endfor %}
