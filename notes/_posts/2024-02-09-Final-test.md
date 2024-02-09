@@ -1,7 +1,8 @@
 ---
 title: Template
 date: 2024-02-09
-category: ignore
+categories: Malware-Analysis Reverse-Engineering Debugging Penetration-Testing Hacking
+tags: Powershell Python C C++ C# Bash
 ---
 
 ```
