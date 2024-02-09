@@ -5,7 +5,7 @@ category: ignore
 
 {% assign sorted_cats = site.categories | sort %}
 {% for cat in sorted_cats %}
-  {% if cat == 'ignore' %}
+  {% if cat[0] == 'ignore' %}
     {% continue %}
   {% endif %}
   <a href="categories/{{ cat[0] }}.md">{{ cat[0] }}</a>
