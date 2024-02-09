@@ -4,12 +4,12 @@ category: ignore
 ---
 
 {% assign sorted_cats = site.categories | sort %}
-
+|---|
 {% for cat in sorted_cats %}
   {% if cat[0] == 'notes' %}
     {% continue %}
   {% endif %}
-  <a href="#{{ cat[0] }}">{{ cat[0] }}</a>
+  | <a href="#{{ cat[0] }}">{{ cat[0] }}</a> |
 {% endfor %}
 
 {% for cat in sorted_cats %}
