@@ -13,6 +13,9 @@ category: ignore
 {% endfor %}
 
 {% for cat in sorted_cats %}
+  {% if cat[0] == 'notes' %}
+    {% continue %}
+  {% endif %}
   <h3 id="{{ cat[0] }}">{{ cat[0] }}</h3>
   <hr />
   
