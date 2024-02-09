@@ -1,6 +1,6 @@
 ---
 title: Categories
-permalink: /categories
+permalink: /notes/categories
 ---
 
 {% assign sorted_cats = site.categories | sort %}
