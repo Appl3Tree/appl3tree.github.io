@@ -9,7 +9,8 @@ permalink: /tags
   <hr />
   
   <ul>
-  {% for post in site.posts %}
+  {% assigned sorted_posts = site.posts | sort %}
+  {% for post in sorted_posts %}
     {% if post.tags contains tag[0] %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
