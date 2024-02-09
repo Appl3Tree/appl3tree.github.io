@@ -1,7 +1,8 @@
 ---
 title: Template
 date: 2024-02-09
-category: ignore
+category: test
+tags: 1 2 3 4 5 6 test7
 ---
 
 ```
