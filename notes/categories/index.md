@@ -2,7 +2,7 @@
 title: Categories
 category: ignore
 ---
-{% assign ignore_cats = "ignore,notes" | split: "," %}
+{% assign ignore_cats = "ignore,notes,Reviews" | split: "," %}
 {% assign sorted_cats = site.categories | sort %}
 
 {% for cat in sorted_cats %}
