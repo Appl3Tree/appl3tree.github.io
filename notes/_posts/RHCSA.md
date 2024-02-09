@@ -1,5 +1,5 @@
 ---
 title: RHCSA Review
-category: Certification Reviews
+category: Reviews
 ---
 It was alright.
