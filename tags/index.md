@@ -12,7 +12,7 @@ permalink: /tags
   {% assign sorted_posts = site.posts | sort %}
   {% for post in sorted_posts %}
     {% if post.tags contains tag[0] %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><a href="notes/{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
   </ul>
