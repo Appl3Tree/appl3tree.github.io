@@ -22,7 +22,7 @@ category: ignore
   <ul>
   {% assign sorted_posts = site.posts | sort %}
   {% for post in sorted_posts %}
-    {% if post.category == cat[0] %}
+    {% if post.category == cat[0] or post.categories contains cat[0] %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
