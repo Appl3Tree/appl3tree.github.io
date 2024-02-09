@@ -2,14 +2,12 @@
 title: Categories
 category: ignore
 ---
-
-{% assign existing_cats = "" | split: "," %}
-{% for post in site.posts %}
-  {% assign existing_cats = existing_cats | push: post.category %}
-{% endfor %}
-{% assign sorted_cats = existing_cats | sort %}
-<h1>{% sorted_cats %}
+{% assign sorted_cats = site.categories | sort %}
 {% for cat in sorted_cats %}
+  {% assign num_posts = site.categories.cat[0] | size %}
+  {% if num_posts < 1 %}
+    {% continue %}
+  {% endif %}
   <h3>{{ cat[0] }}</h3>
   <hr />
   
