@@ -2,7 +2,15 @@
 title: Categories
 category: ignore
 ---
-{% assign sorted_cats = site.categories | sort %}
+
+{% assign existing_cats = [] %}
+{% for post in site.posts %}
+  {% if site.categories contains site.category %}
+    %{ existing_cats += site.category %}
+  {% endif %}
+{% endfor %}
+{% assign sorted_cats = existing_cats | sort %}
+
 {% for cat in sorted_cats %}
   <h3>{{ cat[0] }}</h3>
   <hr />
