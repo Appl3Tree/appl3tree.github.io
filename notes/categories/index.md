@@ -4,7 +4,7 @@ category: ignore
 ---
 
 {% assign sorted_cats = site.categories | sort %}
-|---|
+
 {% for cat in sorted_cats %}
   {% if cat[0] == 'notes' %}
     {% continue %}
