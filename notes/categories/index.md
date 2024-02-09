@@ -5,8 +5,8 @@ category: ignore
 
 {% assign existing_cats = [] %}
 {% for post in site.posts %}
-  {% if site.categories contains site.category %}
-    %{ assign existing_cats = existing_cats | push: site.category %}
+  {% if site.categories contains post.category %}
+    %{ assign existing_cats = existing_cats | push: post.category %}
   {% endif %}
 {% endfor %}
 {% assign sorted_cats = existing_cats | sort %}
