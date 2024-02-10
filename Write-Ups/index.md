@@ -3,10 +3,6 @@ title: Write-Ups
 category: ignore
 ---
 
-> _Take a look!_
-<a href="#HackTheBox/">HackTheBox</a>
-<a href="#TryHackMe/">TryHackMe</a>
-
 {% assign sorted_posts = site.posts | sort %}
 <h3 id="HackTheBox">HackTheBox</h3>
 <hr />
