@@ -2,7 +2,7 @@
 title: Tags
 category: ignore
 ---
-{% assign ignore_tags = "ignore" | split: "," %}
+{% assign ignore_tags = "ignore,TryHackMe,HackTheBox" | split: "," %}
 {% assign sorted_tags = site.tags | sort %}
 
 _The below index can be clicked to jump to a specific category. Ideally this will be useful once there are several different posts._
