@@ -3,6 +3,6 @@ title: Write-Ups
 category: ignore
 ---
 
-Take a look!
-<a href="_HackTheBox/">HackTheBox</a>
-<a href="_TryHackMe/">TryHackMe</a>
+_Take a look!_
+<h3><a href="_HackTheBox/">HackTheBox</a></h3>
+<h3><a href="_TryHackMe/">TryHackMe</a></h3>
