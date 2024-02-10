@@ -1,5 +1,5 @@
 ---
-title: Write-ups
+title: Write-Ups
 category: ignore
 ---
 
