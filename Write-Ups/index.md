@@ -1,5 +1,5 @@
 ---
-title: HackTheBox & TryHackMe Write-ups
+title: Write-ups
 category: ignore
 ---
 
