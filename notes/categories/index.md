@@ -6,12 +6,16 @@ category: ignore
 {% assign sorted_cats = site.categories | sort %}
 
 _The below index can be clicked to jump to a specific category. Ideally this will be useful once there are several different posts._
+<table>
+<tbody>
 {% for cat in sorted_cats %}
   {% if ignore_cats contains cat[0] %}
     {% continue %}
   {% endif %}
-  | <a href="#{{ cat[0] }}">{{ cat[0] }}</a> |
+  <tr><td><a href="#{{ cat[0] }}">{{ cat[0] }}</a></td></tr>
 {% endfor %}
+</tbody>
+</table>
 
 {% for cat in sorted_cats %}
   {% if ignore_cats contains cat[0] %}
