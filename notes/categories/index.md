@@ -5,6 +5,7 @@ category: ignore
 {% assign ignore_cats = "ignore,notes,Reviews,Write-Ups" | split: "," %}
 {% assign sorted_cats = site.categories | sort %}
 
+_The below index can be clicked to jump to a specific category. Ideally this will be useful once there are several different posts._
 {% for cat in sorted_cats %}
   {% if ignore_cats contains cat[0] %}
     {% continue %}
