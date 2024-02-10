@@ -6,12 +6,17 @@ category: ignore
 {% assign sorted_tags = site.tags | sort %}
 
 _The below index can be clicked to jump to a specific category. Ideally this will be useful once there are several different posts._
+<table>
+<tbody>
 {% for tag in sorted_tags %}
   {% if ignore_tags contains tag[0] %}
     {% continue %}
   {% endif %}
-  <a href="#{{ tag[0] }}">{{ tag[0] }}</a>
+  <tr><td><a href="#{{ tag[0] }}">{{ tag[0] }}</a></td></tr>
 {% endfor %}
+</tbody>
+</table>
+  
 
 {% for tag in sorted_tags %}
   {% if ignore_tags contains tag[0] %}
