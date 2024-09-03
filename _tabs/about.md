@@ -5,9 +5,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![Appl3Tree's Github logo](../assets/img/avatar/cybertree.jpg)
-
-##Appl3Tree
+## Appl3Tree
 Jack of all trades, master of none. Working on fixing the second bit!
 
 * [**Blog**](https://appl3tree.github.io)
