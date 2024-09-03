@@ -1,8 +1,15 @@
 ---
 # the default layout is 'page'
+title: 'PS C:\>whoami'
 icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+![Appl3Tree's Github logo](../assets/img/avatar/cybertree.jpg)
+
+##Appl3Tree
+Jack of all trades, master of none. Working on fixing the second bit!
+
+* [**Blog**](https://appl3tree.github.io)
+* [**GitHub**](https://github.com/appl3tree)
+* [**Hacking Notes**](https://appl3tree.gitbook.io)
