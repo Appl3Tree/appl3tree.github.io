@@ -1,5 +1,4 @@
 ---
-# the default layout is 'page'
 title: 'PS C:\>whoami'
 icon: fas fa-info-circle
 order: 4
