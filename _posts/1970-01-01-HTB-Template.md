@@ -13,7 +13,7 @@ tags:
   - template
   - redteam
 show_image_post: true
-image: /assets/img/avatar/cybertree.jpg
+image: /assets/img/infocards/<machine>-infocard.png
 ---
 
 ## HTB - Machine_Name
