@@ -1,7 +1,16 @@
-# HTB Writeups
+# Cybersecurity Writeups & Notes
 
-This gitpage will primarily be used for my HTB/OffSec box write-ups. I may also do some write-ups of certifications, but that's still up in the air.  
+Welcome to my GitPage: [appl3tree.github.io](https://appl3tree.github.io)  
+This site serves as a hub for my cybersecurity write-ups, walkthroughs, and training reflections.
 
-My Notes can be found on my [GitBook page](https://appl3tree.gitbook.io/notes) while write-ups will be found on my [GitPage](https://appl3tree.github.io). 
+## 🔍 What You'll Find Here
 
-The other goal with doing these write-ups is to ideally work on my note-taking and reporting for an actual engagement.
+- Write-ups for **vulnerable machines** from platforms like **Hack The Box**, **OffSec**, **VulnHub**, and others  
+- **CTF event solutions** and challenge breakdowns  
+- Occasional **certification exam reviews** and study reflections
+
+These write-ups help me strengthen my technical note-taking and reporting process — essential skills for real-world security assessments and red team engagements.
+
+## 📘 Notes
+
+For structured notes and references, visit my [GitBook page](https://yourgitbookurl.com).
