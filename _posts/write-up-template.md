@@ -7,14 +7,14 @@ date: 2020-04-14 08:00:00 -0600                           # Change the date to m
 categories: [Templates]                     # Change Templates to Write-ups, Hack the Box
 tags: [htb, hacking, hack the box, template, redteam]     # TAG names should always be lowercase; replace template with writeup, and add relevant tags
 show_image_post: false                                    # Change this to true
-#image: /assets/img/infocards/machine-infocard.png                # Add infocard image here for post preview image
+#image: /assets/img/infocards/template-infocard.png                # Add infocard image here for post preview image
 ---
 
 ## HTB - Machine_Name
 
 ## Overview
 
-![Descriptive information card about this machine](<machine>-infocard.png)
+![Descriptive information card about this machine](template-infocard.png)
 
 Short description to include any strange things to be dealt with
 

@@ -13,14 +13,14 @@ tags:
   - template
   - redteam
 show_image_post: true
-image: /assets/img/infocards/<machine>-infocard.png
+image: /assets/img/infocards/template-infocard.png
 ---
 
 ## HTB - Machine_Name
 
 ## Overview
 
-![Descriptive information card about this machine](<machine>-infocard.png)
+![Descriptive information card about this machine](template-infocard.png)
 
 Short description to include any strange things to be dealt with
 
