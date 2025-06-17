@@ -13,4 +13,4 @@ These write-ups help me strengthen my technical note-taking and reporting proces
 
 ## 📘 Notes
 
-For structured notes and references, visit my [GitBook page](https://yourgitbookurl.com).
+For structured notes and references, visit my [GitBook page](https://appl3tree.gitbook.io).
