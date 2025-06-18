@@ -68,9 +68,11 @@ If you go through each course thoroughly and take notes, you'll be well-prepared
 
 ## Exam Experience
 
-Unlike the CASA exam, which focused more on reasoning through scenarios, the ACP exam leaned more toward rote memorization. Several questions were pulled directly from case studies and examples covered in the courses. One even asked for a specific detail mentioned in a case study video.
+Similar to the CASA exam, there’s no strict enforcement around whether the ACP exam should be taken open- or closed-book. I approached it as closed-book to better test what I actually retained, and I’d recommend others do the same. Especially if you’re preparing for interviews or working in a role where quick recall matters, it’s a good mindset to adopt.
 
-If you're the type to passively watch course videos, you might struggle here. Having solid notes or a strong memory for specifics will help a lot. I treated the exam as closed-book and scored above the 80 percent threshold. It required more deliberate recall than conceptual thinking.
+Compared to CASA, the ACP exam leaned more toward memorization. Several questions were pulled directly from case studies and course examples. One question even asked about a specific detail mentioned briefly in a video. If you're the type to passively watch course videos, you might struggle here. Having solid notes or a strong memory for specifics will help a lot.
+
+I treated the exam as closed-book and scored **87 out of 100**. It required more deliberate recall than conceptual thinking and felt like an assessment of your attention to detail across all five required courses.
 
 ## Final Thoughts
 
