@@ -14,8 +14,6 @@ show_image_post: false                                    # Change this to true
 
 ## Overview
 
-![Descriptive information card about this machine](/assets/img/infocards/template-infocard.png)
-
 Short description to include any strange things to be dealt with
 
 ## Useful Skills and Tools
