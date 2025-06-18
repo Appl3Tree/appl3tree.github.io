@@ -7,7 +7,8 @@ categories:
 tags:
   - ACP
   - apisec
-  - api security
+  - api
+  - security
   - owasp
   - certification
   - review
