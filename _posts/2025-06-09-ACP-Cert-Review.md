@@ -113,7 +113,7 @@ Recommended for:
 **📚 Study Requirements:** ★★★☆☆  
 **🧪 Real-World Applicability:** ★★★★☆  
 
-**Overall Rating:** **4.3 / 5**
+**Overall Rating: 4 / 5**
 
 ---
 

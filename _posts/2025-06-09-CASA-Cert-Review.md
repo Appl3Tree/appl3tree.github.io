@@ -105,7 +105,7 @@ Highly recommended for:
 **📚 Study Requirements:** ★★☆☆☆  
 **🧪 Real-World Applicability:** ★★★★☆  
 
-**Overall Rating:** **4.5 / 5**
+**Overall Rating: 3.75 / 5**
 
 ---
 > _Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original._
