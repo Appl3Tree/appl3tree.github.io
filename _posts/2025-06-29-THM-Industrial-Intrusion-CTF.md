@@ -36,9 +36,7 @@ image: /assets/img/infocards/thm-industrial-ctf.png
 
 ---
 
-<a id="introduction"></a>
-
-## 🏭 **Introduction**
+## 🏭 **Introduction** {#introduction}
 
 The [**Industrial Intrusion CTF**](https://tryhackme.com/industrial-intrusion?utm_source=discord&utm_medium=social&utm_campaign=industrialintrusionctf) on TryHackMe is a hands-on challenge designed to simulate real-world attacks against Operational Technology (OT) environments.
 
