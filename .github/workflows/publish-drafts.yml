@@ -2,7 +2,7 @@ name: Publish Blog Drafts
 
 on:
   schedule:
-    - cron: '52 * * * *'
+    - cron: '55 * * * *'
 
 jobs:
   build:
