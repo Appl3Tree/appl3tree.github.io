@@ -206,7 +206,7 @@ Sh5H
 
 ---
 
-## Task 10 – Web Brr v1
+## Task 10 – Brr v1
 
 Category: Web  
 Difficulty: Easy  
@@ -238,7 +238,7 @@ python2 49734.py <target_ip> 8080 admin admin
 
 ---
 
-## Task 13 – Forensics Orcam
+## Task 13 – Orcam
 
 Category: Forensics  
 Difficulty: Easy  
@@ -272,7 +272,7 @@ THM{Ev1l_M@Cr0}
 
 ---
 
-## Task 15 – Boot2Root Chess Industry
+## Task 15 – Chess Industry
 
 Category: Boot2Root  
 Difficulty: Beginner  
@@ -334,7 +334,7 @@ python3.10 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 
 ---
 
-## Task 16 – Boot2Root Under Construction
+## Task 16 – Under Construction
 
 Category: Boot2Root  
 Difficulty: Easy  
@@ -369,7 +369,7 @@ Retrieved user and root flags.
 
 ---
 
-## Task 20 – Crypto Echoed Streams
+## Task 20 – Echoed Streams
 
 Category: Crypto  
 Difficulty: Easy  
@@ -399,7 +399,7 @@ Output: THM{Echo_Telemetry}
 
 ---
 
-# Task 21 – Crypto – CRC Me If You Can
+# Task 21 – CRC Me If You Can
 
 Goal: Forge a valid control frame with correct CRC to disable covert implant.
 
@@ -473,7 +473,7 @@ THM{crc_m4c_c0mprom1s3d_2093982}
 
 ---
 
-# Task 22 – Networking – Rogue Poller
+# Task 22 – Rogue Poller
 
 Goal: Determine what data an attacker retrieved via Modbus TCP register scans.
 
@@ -503,7 +503,7 @@ Flag recovered from observed Modbus register data.
 
 ---
 
-# Task 23 – Networking – Register Sweep
+# Task 23 – Register Sweep
 
 Goal: Locate ASCII-encoded information in device’s Modbus holding registers.
 
@@ -545,7 +545,7 @@ THM{m4nu4l_p0ll1ng_r3g1st3rs}
 
 ---
 
-# Task 24 – Reversing – Auth
+# Task 24 – Auth
 
 Goal: Determine correct 8-character unlock code for embedded auth binary.
 
