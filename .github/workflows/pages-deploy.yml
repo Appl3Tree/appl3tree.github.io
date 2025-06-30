@@ -2,7 +2,7 @@ name: "Build and Deploy"
 on:
   schedule: 
     # Runs every 10 minutes
-    - cron: '*/10 * * * *'
+    - cron: '0 */4 * * *'
   push:
     branches:
       - main
