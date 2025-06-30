@@ -1,7 +1,7 @@
 ---
 description: Appl3Tree's full detailed write-up of the TryHackMe Industrial Intrusion CTF.
 title: TryHackMe – Industrial Intrusion CTF Full Write-up
-date: 2025-06-30 12:00:00 +0000
+date: 2025-06-30 12:30:00 +0000
 categories:
   - CTF Writeups
 tags:
