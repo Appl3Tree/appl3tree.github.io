@@ -54,9 +54,7 @@ Each task reinforces critical skills for **red teamers, blue teamers, and ICS se
 
 ---
 
-<a id="task-3--breach"></a>
-
-## 📝 **Task 3 – Breach**
+## 📝 **Task 3 – Breach** {#task-3--breach}
 
 ### 🗂️ **Category:** Breach
 
@@ -137,9 +135,7 @@ THM{s4v3_th3_d4t3_27_jun3}
 
 ---
 
-<a id="task-4--discord"></a>
-
-## 📝 **Task 4 – Discord**
+## 📝 **Task 4 – Discord** {#task-4--discord}
 
 ### 🗂️ **Category:** Discord
 
@@ -173,9 +169,7 @@ THM{D15C0RD_57A5H_C0MM4ND5}
 
 ---
 
-<a id="task-5--osint-1"></a>
-
-## 📝 **Task 5 – OSINT 1**
+## 📝 **Task 5 – OSINT 1** {#task-5--osint-1}
 
 ### 🗂️ **Category:** OSINT
 
@@ -220,9 +214,7 @@ THM{Su5sss}
 
 ---
 
-<a id="task-6--osint-2"></a>
-
-## 📝 **Task 6 – OSINT 2**
+## 📝 **Task 6 – OSINT 2** {#task-6--osint-2}
 
 ### 🗂️ **Category:** OSINT
 
@@ -290,9 +282,7 @@ eyJzZXNzaW9uIjoiVC1DTjEtMTcyIiwiZmxhZyI6IlRITXt1cGxpbmtfY2hhbm5lbF9jb25maXJtZWR9
 
 ---
 
-<a id="task-7--osint-3"></a>
-
-## 📝 **Task 7 – OSINT 3**
+## 📝 **Task 7 – OSINT 3** {#task-7--osint-3}
 
 ### 🗂️ **Category:** OSINT
 
@@ -361,9 +351,7 @@ THM{h0pe_th1s_k3y_doesnt_le4d_t0_m3}
 
 ---
 
-<a id="task-10--brr-v1"></a>
-
-## 📝 **Task 10 – Brr v1**
+## 📝 **Task 10 – Brr v1** {#task-10--brr-v1}
 
 ### 🗂️ **Category:** Web
 
@@ -437,9 +425,7 @@ THM{rce_archieved_through_script_injection}
 
 ---
 
-<a id="task-13--orcam"></a>
-
-## 📝 **Task 13 – Orcam**
+## 📝 **Task 13 – Orcam** {#task-13--orcam}
 
 ### 🗂️ **Category:** Forensics
 
@@ -499,9 +485,7 @@ THM{Ev1l_M@Cr0}
 
 ---
 
-<a id="task-15--chess-industry"></a>
-
-## 📝 **Task 15 – Chess Industry**
+## 📝 **Task 15 – Chess Industry** {#task-15--chess-industry}
 
 ### 🗂️ **Category:** Boot2Root
 
@@ -587,9 +571,7 @@ THM{check_check_check_mate}
 
 ---
 
-<a id="task-16--under-construction"></a>
-
-## 📝 **Task 16 – Under Construction**
+## 📝 **Task 16 – Under Construction** {#task-16--under-construction}
 
 ### 🗂️ **Category:** Boot2Root
 
@@ -655,9 +637,7 @@ sudo vi
 
 ---
 
-<a id="task-20--echoed-streams"></a>
-
-## 📝 **Task 20 – Echoed Streams**
+## 📝 **Task 20 – Echoed Streams** {#task-20--echoed-streams}
 
 ### 🗂️ **Category:** Crypto
 
@@ -744,9 +724,7 @@ THM{Echo_Telemetry}
 
 ---
 
-<a id="task-21--crc-me-if-you-can"></a>
-
-## 📝 **Task 21 – CRC Me If You Can**
+## 📝 **Task 21 – CRC Me If You Can** {#task-21--crc-me-if-you-can}
 
 ### 🗂️ **Category:** Crypto
 
@@ -835,9 +813,7 @@ THM{crc_m4c_c0mprom1s3d_2093982}
 
 ---
 
-<a id="task-22--rogue-poller"></a>
-
-## 📝 **Task 22 – Rogue Poller**
+## 📝 **Task 22 – Rogue Poller** {#task-22--rogue-poller}
 
 ### 🗂️ **Category:** Networking
 
@@ -883,9 +859,7 @@ THM{1nDu5tr14L_r3g1st3rs}
 
 ---
 
-<a id="task-23--register-sweep"></a>
-
-## 📝 **Task 23 – Register Sweep**
+## 📝 **Task 23 – Register Sweep** {#task-23--register-sweep}
 
 ### 🗂️ **Category:** Networking
 
@@ -940,9 +914,7 @@ THM{m4nu4l_p0ll1ng_r3g1st3rs}
 
 ---
 
-<a id="task-24--auth"></a>
-
-## 📝 **Task 24 – Auth**
+## 📝 **Task 24 – Auth** {#task-24--auth}
 
 ### 🗂️ **Category:** Reversing
 
