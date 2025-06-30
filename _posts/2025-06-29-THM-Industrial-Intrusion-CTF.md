@@ -32,9 +32,9 @@ Each task reinforces critical skills for **red teamers, blue teamers, and ICS se
 
 ---
 
-## Task 3 – Breach (TryHackMe OT Gate Bypass)
+## Task 3 – Breach
 
-Category: Boot2Root  
+Category: N/A  
 Difficulty: Beginner  
 Flag: THM{s4v3_th3_d4t3_27_jun3}
 
