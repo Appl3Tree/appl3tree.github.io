@@ -2,7 +2,7 @@ name: Publish Blog Drafts
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   build:
@@ -13,6 +13,6 @@ jobs:
     - name: Jekyll Publish Drafts
       uses: soywiz/github-action-jekyll-publish-drafts@v2
       with:
-        github_token: ${{ secrets.WORKFLOW_TOKEN }}
+        github_token: ${{ secrets.GH_ACTIONS_TOKEN }}
         jekyll_path: ./
         branch: main
