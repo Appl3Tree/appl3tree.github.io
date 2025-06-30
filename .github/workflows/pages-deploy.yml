@@ -1,9 +1,11 @@
 name: "Build and Deploy"
 on:
+  schedule: 
+    # Runs every 10 minutes
+    - cron: "*/10 * * * *"
   push:
     branches:
       - main
-      - master
     paths-ignore:
       - .gitignore
       - README.md
@@ -34,6 +36,15 @@ jobs:
           # submodules: true
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
+
+      # Use GitHub Actions' cache to cache dependencies on servers
+      - name: Cache
+        uses: actions/cache@v4.2.3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
 
       - name: Setup Pages
         id: pages
