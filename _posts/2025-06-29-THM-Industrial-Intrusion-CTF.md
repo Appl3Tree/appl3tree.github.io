@@ -34,9 +34,11 @@ Each task reinforces critical skills for **red teamers, blue teamers, and ICS se
 
 ## Task 3 – Breach
 
-Category: N/A  
-Difficulty: Beginner  
-Flag: THM{s4v3_th3_d4t3_27_jun3}
+**Category:** N/A  
+**Difficulty:** Beginner  
+**Flag:** THM{s4v3_th3_d4t3_27_jun3}
+
+**Lessons Learned:** OT gate systems often require multiple preconditions (badge + motion) **plus** a separate trigger coil. Systematic enumeration of coils with mbtget and validating via live API queries ensures bypass success.
 
 ### Steps Taken
 
@@ -80,9 +82,11 @@ mbtget -w5 1 -u 1 -a 30 <target_ip>
 
 ## Task 4 – Discord
 
-Category: Discord  
-Difficulty: Beginner  
-Flag: THM{D15C0RD_57A5H_C0MM4ND5}
+**Category:** Discord  
+**Difficulty:** Beginner  
+**Flag:** THM{D15C0RD_57A5H_C0MM4ND5}
+
+**Lessons Learned:** Always enumerate available bot slash commands during CTF Discord integrations to quickly identify solutions
 
 ### Steps Taken
 
@@ -100,9 +104,11 @@ Bot returned the flag.
 
 ## Task 5 – OSINT 1
 
-Category: OSINT  
-Difficulty: Beginner  
-Flag: THM{Su5sss}
+**Category:** OSINT  
+**Difficulty:** Beginner  
+**Flag:** THM{Su5sss}
+
+**Lessons Learned:** Certificate Transparency logs (crt.sh) provide historical subdomain data even for ephemeral phishing infrastructure.
 
 ### Steps Taken
 
@@ -124,9 +130,11 @@ THM{Su5sss}
 
 ## Task 6 – OSINT 2
 
-Category: OSINT  
-Difficulty: Easy  
-Flag: THM{uplink_channel_confirmed}
+**Category:** OSINT  
+**Difficulty:** Easy  
+**Flag:** THM{uplink_channel_confirmed}
+
+**Lessons Learned:** Inspecting external JS references can reveal attacker fallback infrastructure and tokens embedded within code.
 
 ### Steps Taken
 
@@ -167,9 +175,11 @@ eyJzZXNzaW9uIjoiVC1DTjEtMTcyIiwiZmxhZyI6IlRITXt1cGxpbmtfY2hhbm5lbF9jb25maXJtZWR9
 
 ## Task 7 – OSINT 3
 
-Category: OSINT  
-Difficulty: Medium  
-Flag: THM{h0pe_th1s_k3y_doesnt_le4d_t0_m3}
+**Category:** OSINT  
+**Difficulty:** Medium  
+**Flag:** THM{h0pe_th1s_k3y_doesnt_le4d_t0_m3}
+
+**Lessons Learned:** GitHub commit histories and PGP keyserver lookups are powerful for recovering deleted security advisories or hidden flags.
 
 ### Steps Taken
 
@@ -208,9 +218,11 @@ Sh5H
 
 ## Task 10 – Brr v1
 
-Category: Web  
-Difficulty: Easy  
-Flag: THM{rce_archieved_through_script_injection}
+**Category:** Web  
+**Difficulty:** Easy  
+**Flag:** THM{rce_archieved_through_script_injection}
+
+**Lessons Learned:** Default credentials combined with unpatched file upload vulnerabilities remain critical OT/ICS risks for easy RCE.
 
 ### Steps Taken
 
@@ -240,9 +252,11 @@ python2 49734.py <target_ip> 8080 admin admin
 
 ## Task 13 – Orcam
 
-Category: Forensics  
-Difficulty: Easy  
-Flag: THM{Ev1l_M@Cr0}
+**Category:** Forensics  
+**Difficulty:** Easy  
+**Flag:** THM{Ev1l_M@Cr0}
+
+**Lessons Learned:** Deobfuscating encoded macro arrays manually is often faster than sandboxing for quick forensic triage and command extraction.
 
 ### Steps Taken
 
@@ -274,11 +288,13 @@ THM{Ev1l_M@Cr0}
 
 ## Task 15 – Chess Industry
 
-Category: Boot2Root  
-Difficulty: Beginner  
-Flags:  
-User: THM{bishop_to_c4_check}  
-Root: THM{check_check_check_mate}
+**Category:** Boot2Root  
+**Difficulty:** Beginner  
+**Flags:**  
+- _User:_ THM{bishop_to_c4_check}  
+- _Root:_ THM{check_check_check_mate}
+
+**Lessons Learned:** Finger services can leak data via .plan files. Linux capabilities (cap_setuid=ep) on python binaries enable immediate root shells without typical exploit chains.
 
 ### Steps Taken
 
@@ -336,11 +352,13 @@ python3.10 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 
 ## Task 16 – Under Construction
 
-Category: Boot2Root  
-Difficulty: Easy  
-Flags:  
-User: THM{nic3_j0b_You_got_it_w00tw00t}  
-Root: THM{y0u_g0t_it_welldoneeeee}
+**Category:** Boot2Root  
+**Difficulty:** Easy  
+**Flags:**  
+- _User:_ THM{nic3_j0b_You_got_it_w00tw00t}  
+- _Root:_ THM{y0u_g0t_it_welldoneeeee}
+
+**Lessons Learned:** Directory busting for hidden /keys/ folders is effective on poorly secured dev environments. Sudo vi with no password restrictions yields instant root via :!bash.
 
 ### Steps Taken
 
@@ -371,9 +389,11 @@ Retrieved user and root flags.
 
 ## Task 20 – Echoed Streams
 
-Category: Crypto  
-Difficulty: Easy  
-Flag: THM{Echo_Telemetry}
+**Category:** Crypto  
+**Difficulty:** Easy  
+**Flag:** THM{Echo_Telemetry}
+
+**Lessons Learned:** AES-GCM nonce reuse enables plaintext recovery of targeted packets via XOR chaining, highlighting poor cryptographic hygiene.
 
 ### Steps Taken
 
@@ -399,11 +419,15 @@ Output: THM{Echo_Telemetry}
 
 ---
 
-# Task 21 – CRC Me If You Can
+## Task 21 – CRC Me If You Can
 
-Goal: Forge a valid control frame with correct CRC to disable covert implant.
+**Category:** Crypto  
+**Difficulty:** Easy  
+**Flag:** THM{crc_m4c_c0mprom1s3d_2093982}
 
-## Steps
+**Lessons Learned:** CRC32 lacks cryptographic security. By capturing a valid dummy frame and calculating the XOR difference to the desired forged CRC, one can craft a malicious payload that passes integrity checks without knowing the true polynomial internals.
+
+### Steps Taken
 
 1. Downloaded challenge files:
    - `gateway_proto.py` (contains `crc32` function)
@@ -473,11 +497,15 @@ THM{crc_m4c_c0mprom1s3d_2093982}
 
 ---
 
-# Task 22 – Rogue Poller
+## Task 22 – Rogue Poller
 
-Goal: Determine what data an attacker retrieved via Modbus TCP register scans.
+**Category:** Networking  
+**Difficulty:** Beginner  
+**Flag:** THM{1nDu5tr14L_r3g1st3rs}
 
-## Steps
+**Lessons Learned:**  Monitoring Modbus TCP traffic with Wireshark enables quick extraction of queried register values. Industrial protocols often carry sensitive plaintext data unencrypted, making PCAP inspection a core OT assessment technique.
+
+### Steps Taken
 
 1. Downloaded PCAP file: `rogue-poller-1750969333044.pcapng`
 
@@ -503,11 +531,15 @@ Flag recovered from observed Modbus register data.
 
 ---
 
-# Task 23 – Register Sweep
+## Task 23 – Register Sweep
 
-Goal: Locate ASCII-encoded information in device’s Modbus holding registers.
+**Category:** Networking  
+**Difficulty:** Easy  
+**Flag:** THM{m4nu4l_p0ll1ng_r3g1st3rs}
 
-## Steps
+**Lessons Learned:**  When scanning holding registers, decode using correct endianness conversion before ASCII interpretation. Tools like mbtget have read limits (max 125 at a time) requiring looped sweeps for complete enumeration.
+
+### Steps Taken
 
 1. Target: `<target_ip>`
 
@@ -545,11 +577,14 @@ THM{m4nu4l_p0ll1ng_r3g1st3rs}
 
 ---
 
-# Task 24 – Auth
+## Task 24 – Auth
 
-Goal: Determine correct 8-character unlock code for embedded auth binary.
+**Category:** Reversing  
+**Difficulty:** Easy  
+**Flag:** THM{Simple_tostart_nice_done_mwww}
 
-## Steps
+**Lessons Learned:**  Disassembling the binary revealed a transform function XOR’ing user input with 0x55. Calculating the inverse input by XOR’ing the target value with 0x55 allowed direct authentication bypass, demonstrating classic reversing-based input forging.
+### Steps
 
 1. Downloaded stripped binary `auth`.
 
