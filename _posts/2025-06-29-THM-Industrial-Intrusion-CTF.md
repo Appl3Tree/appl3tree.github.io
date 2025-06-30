@@ -40,7 +40,7 @@ Each task reinforces critical skills for **red teamers, blue teamers, and ICS se
 
 **Lessons Learned:** OT gate systems often require multiple preconditions (badge + motion) **plus** a separate trigger coil. Systematic enumeration of coils with mbtget and validating via live API queries ensures bypass success.
 
-### Steps Taken
+**Steps Taken**
 
 1. **Scanned all ports:**
 
@@ -88,7 +88,7 @@ mbtget -w5 1 -u 1 -a 30 <target_ip>
 
 **Lessons Learned:** Always enumerate available bot slash commands during CTF Discord integrations to quickly identify solutions
 
-### Steps Taken
+**Steps Taken**
 
 1. Joined Discord server.
 
@@ -110,7 +110,7 @@ Bot returned the flag.
 
 **Lessons Learned:** Certificate Transparency logs (crt.sh) provide historical subdomain data even for ephemeral phishing infrastructure.
 
-### Steps Taken
+**Steps Taken**
 
 1. Queried crt.sh for certificates of `virelia-water.it.com`.
 
@@ -136,7 +136,7 @@ THM{Su5sss}
 
 **Lessons Learned:** Inspecting external JS references can reveal attacker fallback infrastructure and tokens embedded within code.
 
-### Steps Taken
+**Steps Taken**
 
 1. Inspected phishing page source, found JS:
 
@@ -181,7 +181,7 @@ eyJzZXNzaW9uIjoiVC1DTjEtMTcyIiwiZmxhZyI6IlRITXt1cGxpbmtfY2hhbm5lbF9jb25maXJtZWR9
 
 **Lessons Learned:** GitHub commit histories and PGP keyserver lookups are powerful for recovering deleted security advisories or hidden flags.
 
-### Steps Taken
+**Steps Taken**
 
 1. Challenge mentioned removed report URL.
 
@@ -224,7 +224,7 @@ Sh5H
 
 **Lessons Learned:** Default credentials combined with unpatched file upload vulnerabilities remain critical OT/ICS risks for easy RCE.
 
-### Steps Taken
+**Steps Taken**
 
 1. Scanned and found ports 22,80,5901,8080 open.
 
@@ -258,7 +258,7 @@ python2 49734.py <target_ip> 8080 admin admin
 
 **Lessons Learned:** Deobfuscating encoded macro arrays manually is often faster than sandboxing for quick forensic triage and command extraction.
 
-### Steps Taken
+**Steps Taken**
 
 1. Found `writing_template.eml` with base64 macro doc.
 
@@ -296,7 +296,7 @@ THM{Ev1l_M@Cr0}
 
 **Lessons Learned:** Finger services can leak data via .plan files. Linux capabilities (cap_setuid=ep) on python binaries enable immediate root shells without typical exploit chains.
 
-### Steps Taken
+**Steps Taken**
 
 1. Found open ports: 22,79,80.
 
@@ -360,7 +360,7 @@ python3.10 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 
 **Lessons Learned:** Directory busting for hidden /keys/ folders is effective on poorly secured dev environments. Sudo vi with no password restrictions yields instant root via :!bash.
 
-### Steps Taken
+**Steps Taken**
 
 1. Dirbusted and found `/keys/`.
 
@@ -395,7 +395,7 @@ Retrieved user and root flags.
 
 **Lessons Learned:** AES-GCM nonce reuse enables plaintext recovery of targeted packets via XOR chaining, highlighting poor cryptographic hygiene.
 
-### Steps Taken
+**Steps Taken**
 
 1. Downloaded cipher1.bin (known plaintext) and cipher2.bin.
 
@@ -427,7 +427,7 @@ Output: THM{Echo_Telemetry}
 
 **Lessons Learned:** CRC32 lacks cryptographic security. By capturing a valid dummy frame and calculating the XOR difference to the desired forged CRC, one can craft a malicious payload that passes integrity checks without knowing the true polynomial internals.
 
-### Steps Taken
+**Steps Taken**
 
 1. Downloaded challenge files:
    - `gateway_proto.py` (contains `crc32` function)
@@ -505,7 +505,7 @@ THM{crc_m4c_c0mprom1s3d_2093982}
 
 **Lessons Learned:**  Monitoring Modbus TCP traffic with Wireshark enables quick extraction of queried register values. Industrial protocols often carry sensitive plaintext data unencrypted, making PCAP inspection a core OT assessment technique.
 
-### Steps Taken
+**Steps Taken**
 
 1. Downloaded PCAP file: `rogue-poller-1750969333044.pcapng`
 
@@ -539,7 +539,7 @@ Flag recovered from observed Modbus register data.
 
 **Lessons Learned:**  When scanning holding registers, decode using correct endianness conversion before ASCII interpretation. Tools like mbtget have read limits (max 125 at a time) requiring looped sweeps for complete enumeration.
 
-### Steps Taken
+**Steps Taken**
 
 1. Target: `<target_ip>`
 
@@ -584,7 +584,7 @@ THM{m4nu4l_p0ll1ng_r3g1st3rs}
 **Flag:** THM{Simple_tostart_nice_done_mwww}
 
 **Lessons Learned:**  Disassembling the binary revealed a transform function XOR’ing user input with 0x55. Calculating the inverse input by XOR’ing the target value with 0x55 allowed direct authentication bypass, demonstrating classic reversing-based input forging.
-### Steps
+**Steps Taken**
 
 1. Downloaded stripped binary `auth`.
 
