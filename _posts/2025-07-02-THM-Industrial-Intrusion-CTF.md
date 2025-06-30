@@ -18,6 +18,7 @@ image: /assets/img/infocards/thm-industrial-ctf.png
 
 ## 📑 **Table of Contents**
 
+- [Introduction](#introduction)
 - [Task 3 – Breach](#task-3--breach)
 - [Task 4 – Discord](#task-4--discord)
 - [Task 5 – OSINT 1](#task-5--osint-1)
@@ -32,6 +33,26 @@ image: /assets/img/infocards/thm-industrial-ctf.png
 - [Task 22 – Rogue Poller](#task-22--rogue-poller)
 - [Task 23 – Register Sweep](#task-23--register-sweep)
 - [Task 24 – Auth](#task-24--auth)
+
+---
+
+<a id="introduction"></a>
+
+## 🏭 **Introduction**
+
+The [**Industrial Intrusion CTF**](https://tryhackme.com/industrial-intrusion?utm_source=discord&utm_medium=social&utm_campaign=industrialintrusionctf) on TryHackMe is a hands-on challenge designed to simulate real-world attacks against Operational Technology (OT) environments.
+
+This event focuses on:
+
+- Modbus manipulation
+- OT protocol exploitation
+- Network forensics
+- OSINT investigations
+- Embedded device reversing
+
+Each task reinforces critical skills for **red teamers, blue teamers, and ICS security professionals** looking to expand their knowledge in industrial cybersecurity.
+
+---
 
 <a id="task-3--breach"></a>
 
