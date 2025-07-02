@@ -251,6 +251,7 @@ python2 49734.py <target_ip> 8080 admin admin
 ---
 
 ## Task 11 - Persistence
+
 **Category:** Web
 **Difficulty:** Medium
 
@@ -396,6 +397,7 @@ Retrieved user and root flags.
 ---
 
 ## Task 19 - No Salt, No Shame
+
 **Category:** Crypto
 **Difficulty:** Beginner
 
