@@ -252,8 +252,8 @@ python2 49734.py <target_ip> 8080 admin admin
 
 ## Task 11 - Persistence
 
-**Category:** Web
-**Difficulty:** Medium
+**Category:** Web  
+**Difficulty:** Medium  
 
 You can read about the solve for this challenge on one of my teammates' GitHub page here: https://muslimfrompk.gitbook.io/blog/ctf-walkthroughs/industrial-intrusion-ctf-2025-tryhackme/task-11-persistence
 
@@ -398,8 +398,8 @@ Retrieved user and root flags.
 
 ## Task 19 - No Salt, No Shame
 
-**Category:** Crypto
-**Difficulty:** Beginner
+**Category:** Crypto  
+**Difficulty:** Beginner  
 
 Unfortunately I don't have the write-up for this challenge but you can connect with one of my teammates who is the one that solved this challenge here: https://www.linkedin.com/in/jfreedev
 
