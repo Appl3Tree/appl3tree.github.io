@@ -1,0 +1,197 @@
+---
+title: "L3akCTF 2025 Write-up"
+date: 2025-07-13 12:45:00 -0700
+categories: CTF Write-ups
+tags: 
+  - CTF
+  - walkthrough
+  - writeup
+  - cybersecurity
+  - osint
+  - geoguessr
+  - ctftime
+  - picarta
+description: "Write-up for L3akCTF 2025 by AppleTree, part of team APISec Avengers. Focused heavily on OSINT challenges with GeoGuessr-style tasks."
+---
+
+# L3akCTF 2025 Write-up
+
+**Author:** AppleTree  
+**Team:** APISec Avengers  
+**Event Dates:** July 11–13, 2025  
+**Platform:** [ctf.l3ak.team](https://ctf.l3ak.team/)  
+**Duration:** 48 Hours  
+**Total Challenges:** 64  
+**Categories:** Crypto, Pwn, Rev, Web, Misc, Mobile, Forensics, Hardware/RF, OSINT, Hash Cracking  
+**Flag Format:** `L3AK{[ -~]+}`  
+
+---
+
+## TL;DR
+I focused primarily on the **OSINT** challenges, which followed a GeoGuessr-style format requiring geographic deduction from images. Due to time constraints, I only contributed a couple hours on July 12 and about 30 minutes on July 13. I completed 6 challenges (5 OSINT, 1 Misc) worth 300 total points.
+
+My teammate **[Jesse Freeman](https://www.linkedin.com/in/jfreedev/)** handled two **Web** challenges for another 291 points, bringing our team total to **591 points** and a final ranking of **391st place**.
+
+---
+
+## Sanity Check (Misc, 50 points)
+
+**Challenge Description:**  
+> Welcome To L3akCTF 2025!! Make sure to join our Discord and read the #rules!
+
+**Steps Taken:**
+1. Joined the Discord server.
+2. Opened the `#rules` channel.
+3. Found the flag hidden in the **About section**.
+
+**Flag:** `L3AK{W3Lc0mE_t0_L3aKCTF_2025!}`  
+couple total**Points:** 50
+
+---
+
+## Sunny Day (OSINT, 50 points)
+
+**Steps Taken:**
+1. Identified mountainous European terrain and classic architecture.
+2. Used church and tower as landmarks.
+3. Matched features to **Triesenberg, Liechtenstein**.
+4. Confirmed with satellite and street view: `47.117462, 9.545970`
+
+**Flag:** *Captured via map pin drop*  
+**Points:** 50
+
+**Screenshots:**  
+![Church top](/assets/img/screenshots/L3akCTF_2025/sunny_day_church_top.png)
+![Tower landmark](/assets/img/screenshots/L3akCTF_2025/sunny_day_tower_landmark.png)
+
+---
+
+## Mountain View (OSINT, 50 points)
+
+**Steps Taken:**
+1. Found signage written in Japanese.
+2. Used Picarta.ai to confirm Japan.
+3. Blossoms and path signage suggested **Yoshino**.
+4. Coordinates submitted: `34.356146, 135.872289`
+
+**Flag:** `L3AK{y0sh1n0_HAs_gR3At_54KuRA_Bl0s5omS}`  
+**Points:** 50
+
+**Screenshots:**  
+![Sign 1](/assets/img/screenshots/L3akCTF_2025/mountain_view_sign_1.png)
+![Sign 2](/assets/img/screenshots/L3akCTF_2025/mountain_view_sign_2.png)
+![Sign 3](/assets/img/screenshots/L3akCTF_2025/mountain_view_sign_3.png)
+
+---
+
+## Lost Locomotives (OSINT, 51 points)
+
+**Steps Taken:**
+1. Noticed a labeled train (500).
+2. Researched and confirmed this as the **Hiram Bingham Train**.
+3. Narrowed location to **Ollantaytambo, Peru** via blog.
+4. Verified terrain and identifiers.
+5. Final coordinates: `-13.263979, -72.268991`
+
+**Flag:** `L3AK{cH00_Ch0o_1n_P3Ru}`  
+**Points:** 50
+
+**Screenshots:**  
+![Train plate](/assets/img/screenshots/L3akCTF_2025/lost_locomotives_train_500_plate.png)
+![River + mountains](/assets/img/screenshots/L3akCTF_2025/lost_locomotives_river_mountains.png)
+![Train identifier](/assets/img/screenshots/L3akCTF_2025/lost_locomotives_identifier.png)
+
+---
+
+## Grain of Truth (OSINT, 50 points)
+
+**Steps Taken:**
+1. Focused on an electrical pole sign.
+2. Used Picarta.ai to get Taiwan, Vietnam, China candidates.
+3. Narrowed to Taiwan using font/style and terrain.
+4. Used compass-aligned views for triangulation.
+5. Final coordinates: `23.5558605, 120.4464335`
+
+**Flag:** `L3AK{Wh0_Kn3W_El3ctr1C_p0L3S_W3R3_so_Us3FuL!}`  
+**Points:** 50
+
+**Screenshots:**  
+![Pole sign](/assets/img/screenshots/L3akCTF_2025/grain_of_truth_power_pole_sign.png)
+![Wide view](/assets/img/screenshots/L3akCTF_2025/grain_of_truth_wide_view.png)
+![North](/assets/img/screenshots/L3akCTF_2025/grain_of_truth_north_view.png)
+![East](/assets/img/screenshots/L3akCTF_2025/grain_of_truth_east_view.png)
+![South](/assets/img/screenshots/L3akCTF_2025/grain_of_truth_south_view.png)
+![West](/assets/img/screenshots/L3akCTF_2025/grain_of_truth_west_view.png)
+
+---
+
+## Elephant Enclosure (OSINT, 50 points)
+
+**Steps Taken:**
+1. Saw a zoo-like enclosure with natural stone and foliage.
+2. Suspected **Singapore Zoo**.
+3. Validated the location via image match and Street View.
+4. Coordinates: `1.405245, 103.795882`
+
+**Flag:** `L3AK{E13ph4nTs_4R3_F4sT_AF_https://youtu.be/ccxNteEogrg}`  
+**Points:** 50
+
+**Screenshots:**  
+![North](/assets/img/screenshots/L3akCTF_2025/elephant_enclosure_north.png)
+![East](/assets/img/screenshots/L3akCTF_2025/elephant_enclosure_east.png)
+
+---
+
+## Teammate Contributions
+
+### Certay (Web, 241 points) – Jesse Freeman  
+**Challenge Description:**  
+> Probably you need to understand our language to get some of the super powers?
+
+### Flag L3ak (Web, 50 points) – Jesse Freeman  
+**Challenge Description:** 
+> What's the name of this CTF? Yk what to do 😉
+
+---
+
+## Tools & Techniques Used
+
+- Google Maps & Street View  
+- [Picarta.ai](https://picarta.ai) (AI-based geolocation)  
+- Reverse image search (Google & Bing)  
+- Blog/forum references for identifying rare landmarks  
+- Cardinal direction screenshots for triangulation  
+
+---
+
+## Lessons Learned
+
+- Picarta is extremely effective for narrowing country-level guesses  
+- Mapping out all four cardinal views speeds up alignment and confirmation  
+- Geoguessr-style CTFs are limited by lack of Street View in many regions  
+- AI + traditional OSINT creates a strong combination for visual recon  
+
+---
+
+## Final Scoreboard Stats
+
+- ✅ 6 Challenges Solved by AppleTree  
+- ✅ 2 Challenges Solved by Jesse Freeman  
+- 🧠 Primary Focus: OSINT  
+- 🏆 **Total Points:** 591  
+- 📈 **Final Ranking:** 391st out of teams  
+- 🧩 Total Challenges Available: 64  
+  - 5 Misc (plus 1 Feedback)
+  - 8 OSINT
+  - 5 Hash Cracking
+  - 10 Reverse Engineering
+  - 4 Mobile
+  - 9 Crypto
+  - 6 Forensics
+  - 7 Pwn
+  - 8 Web
+  - 2 Hardware/RF
+
+---
+
+> _Note: AI-assisted editing was only used to format into markdown headings and frontmatter. All technical content and steps remain original._
