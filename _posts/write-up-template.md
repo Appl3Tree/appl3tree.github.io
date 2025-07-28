@@ -60,3 +60,7 @@ I started my enumeration with an nmap scan of `xx.xx.xx.xxx`.  The options I reg
 ### Root.txt
 
 Thanks to [`<box_creator>`](https://www.hackthebox.eu/home/users/profile/<profile_num>) for something interesting or useful about this machine.
+
+---
+
+> _Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original._
