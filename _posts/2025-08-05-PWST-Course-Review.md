@@ -67,7 +67,8 @@ The **reporting section** is another highlight. Many technical courses neglect t
 - **ZAP-Centric Approach:** Burp Suite advanced users will need supplemental material for advanced workflows.
 - **Foundational Pacing:** Experienced testers may find early sections move slowly, though they provide a valuable refresh.
 
-### Final Ratings
+## Final Ratings
+
 | Category | Rating |
 |----------|--------|
 | 🧠 Knowledge Depth | ★★★★☆ |
