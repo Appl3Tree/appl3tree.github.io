@@ -2,12 +2,18 @@
 title: "Practical Web Application Security and Testing (PWST) Review"
 date: 2025-08-05 00:00:00 +0000
 categories:
-  - Reviews
+  - Course Reviews
 tags:
   - PWST
   - TCM
   - TaggartInstitute
-  - WebAppPentest
+  - training
+  - course
+  - review
+  - cybersecurity
+  - webapp
+  - pentesting
+  - owasp
 description: "AppleTree's in-depth review of Michael Taggart’s Practical Web Application Security and Testing (PWST) course, including full curriculum highlights, lab experience, and methodology insights."
 show_image_post: true
 image: /assets/img/infocards/PWST-Review.png
