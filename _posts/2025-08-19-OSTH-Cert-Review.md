@@ -40,7 +40,6 @@ The defensive certification market remains small compared to offensive certifica
 
 ## Course Overview
 
-* **Certifying Body:** Offensive Security (OffSec)  
 * **Course Name:** TH-200: Foundational Threat Hunting  
 * **Length:** ~41 hours of guided content + hands-on labs  
 * **Delivery:** Online, self-paced through OffSec’s learning platform  
