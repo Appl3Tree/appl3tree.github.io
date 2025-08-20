@@ -109,7 +109,7 @@ The defensive certification market remains small compared to offensive certifica
 
 ---
 
-## Comparison Table (validated pricing)
+## Comparison Table
 
 | Course / Certification       | Provider           |  Cost (Course + Exam) | Notes                                                                                                 |
 | ---------------------------- | ------------------ | --------------------: | ----------------------------------------------------------------------------------------------------- |
