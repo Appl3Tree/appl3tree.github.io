@@ -91,16 +91,16 @@ Recommended for:
 - **Developers** who want to implement APIs with security built in  
 - **Pentesters** who need more context on how APIs are built and defended  
 
-## Pros and Cons
+## Strengths and Limitations
 
-### ✅ Pros
+### ✅ Strengths
 - Covers the full API lifecycle, from documentation to deployment  
 - Instructor lineup includes experienced voices from the API and security space  
 - Good focus on misconfigurations, insecure defaults, and design issues  
 - Five structured courses make studying clear and focused  
 - Self-paced with flexible exam scheduling
 
-### ❌ Cons
+### ❌ Limitations
 - No hands-on or lab component  
 - Exam questions often rely on memorization over applied understanding  
 - Some material can feel a bit repetitive across the five courses  

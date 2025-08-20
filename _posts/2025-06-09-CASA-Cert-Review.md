@@ -84,16 +84,16 @@ Highly recommended for:
 - **Blue teamers** working to defend against modern API threats  
 - **Developers** who want to build more secure APIs by learning how they're attacked
 
-## Pros and Cons
+## Strengths and Limitations
 
-### ✅ Pros
+### ✅ Strengths
 - Scenario-based questions test real understanding, not memorization  
 - Well-aligned course that’s short, free, and practical  
 - Applicable to red teamers, blue teamers, and developers alike  
 - Affordable price for the value it provides  
 - Clean, fair exam experience with no trick questions
 
-### ❌ Cons
+### ❌ Limitations
 - No hands-on component for those who prefer practical testing  
 - Some OWASP categories feel overlapping if you're unfamiliar  
 - Not as widely recognized (yet) as traditional certs like OSCP or eJPT

@@ -50,9 +50,9 @@ image: /assets/img/infocards/offsec-ir200-osir-review.png
 
 ---
 
-### Pros & Cons
+### Strengths & Limitations
 
-| ✅ Pros | ❌ Cons |
+| ✅ Strengths | ❌ Limitations |
 |---------|--------|
 | Realistic network and host forensic workflows | High price compared to other IR certs |
 | Strong emphasis on structured report writing | Time pressure in both exam and reporting |

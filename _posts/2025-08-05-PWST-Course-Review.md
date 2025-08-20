@@ -56,14 +56,14 @@ What truly stood out to me was Michael’s choice to center much of the practica
 
 The **reporting section** is another highlight. Many technical courses neglect the delivery of findings, but Michael thoroughly covers how to present results in a professional, client-ready format.
 
-## Pros
+## Strengths
 - **Accessibility Commitment:** Michael’s philosophy of keeping quality education affordable or even free when needed.
 - **Smooth Lab Experience:** Docker or VM-based labs minimize setup headaches.
 - **Thorough Coverage:** OWASP Top 10, APIs, and full pentest methodology from scoping to reporting.
 - **Practical Workflow:** Realistic Juice Shop pentest mirrors actual engagements.
 - **Reporting Focus:** Strong emphasis on producing professional deliverables.
 
-## Cons
+## Limitations
 - **ZAP-Centric Approach:** Burp Suite advanced users will need supplemental material for advanced workflows.
 - **Foundational Pacing:** Experienced testers may find early sections move slowly, though they provide a valuable refresh.
 
