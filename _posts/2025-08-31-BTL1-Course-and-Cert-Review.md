@@ -39,7 +39,7 @@ I chose to complete **all 315 topics, all 24 labs, and all 32 quizzes** before s
 - **Digital Forensics** – Imaging and examining disk artifacts, basic memory analysis, and identifying signs of compromise.  
 - **Security Information and Event Monitoring (SIEM)** – Using SIEM platforms to parse logs, identify anomalies, and create meaningful detections.  
 - **Incident Response** – The incident response lifecycle, investigative documentation, and structured remediation.  
-- **BTL1 Exam Preparation** – Consolidation of prior domains with review material and report-writing guidance.  
+- **BTL1 Exam Preparation** – Consolidation of prior domains with review material.  
 
 The structure of these domains creates a natural progression from foundational knowledge to practical application, making the transition into the exam format straightforward.
 
@@ -47,7 +47,7 @@ The structure of these domains creates a natural progression from foundational k
 The BTL1 exam is a **24-hour practical assessment**. It is **open-book and unproctored**, accessed directly through the same portal as the course labs. Once started, the candidate is provided with multiple investigative tasks that require the application of the skills covered across all eight domains.  
 
 ### Exam Structure
-- **Length:** 24-hour exam window, followed by report submission.  
+- **Length:** 24-hour exam window.  
 - **Format:** Scenario-based investigation requiring log analysis, phishing triage, forensic review, and detection writing.  
 - **Tools:** The exam requires use of SIEMs, forensic analysis platforms, memory inspection utilities, and network traffic analysis tools.  
 - **Scoring:** Passing requires **70%**, while a **90%+ first-attempt score** earns the **Gold Coin**. Passing below that threshold awards the Silver Coin.  
@@ -74,8 +74,7 @@ Based on my own experience, a few strategies proved essential:
 - **Take extensive notes** – This was the most important factor in my success. Having a personal playbook made the exam much smoother.  
 - **Work through everything** – Completing all topics, labs, and quizzes ensured there were no surprises in the exam.  
 - **Organize your references** – Being open-book only helps if your notes are clear and searchable.  
-- **Plan your time** – Even if you finish early, budget for breaks and report writing.  
-- **Practice professional reporting** – The exam grading considers accuracy, clarity, and the quality of written communication.  
+- **Plan your time** – Even if you finish early, budget for breaks.  
 
 ## Comparable Courses and Certifications
 For me, the most useful comparisons come from certifications and training that also emphasize broad defensive coverage.  
