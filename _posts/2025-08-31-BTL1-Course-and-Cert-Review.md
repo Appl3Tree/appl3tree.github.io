@@ -131,7 +131,7 @@ For me, the most useful comparisons come from certifications and training that a
 
 - **Knowledge Depth (★★★★★★★★☆☆):** Covers a wide range of defensive skills across eight domains, providing a strong foundation without diving into deep specialization.  
 - **Real-World Applicability (★★★★★★★★★☆):** The exam replicates actual SOC workflows, making the learning directly transferable.  
-- **Value for Cost (★★★★★★★★★☆):** At $450, the combination of content, labs, and certification provides excellent value.  
+- **Value for Cost (★★★★★★★★★☆):** At $540, the combination of content, labs, and certification provides excellent value.  
 - **Study Requirements (★★★★★★★☆☆☆):** Requires a consistent commitment. I completed the entire course in 25 days of steady work, supported by detailed note-taking.  
 - **Industry Relevance & Accessibility (★★★★★★★★☆☆):** Recognition continues to grow, making it a valuable addition to a blue team career path.  
 
