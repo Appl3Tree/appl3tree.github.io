@@ -130,7 +130,7 @@ For me, the most useful comparisons come from certifications and training that a
 
 - **Knowledge Depth (5/10):** Covers eight domains with strong breadth, but remains foundational rather than deep.  
 - **Real-World Applicability (7/10):** Practical labs and exam tasks simulate SOC workflows, making skills directly transferable.  
-- **Value for Cost (8/10):** At ~£399 (~$540 USD), the course is more expensive than some other entry-level certifications, but the structured labs, full curriculum, and practical exam justify the investment.  
+- **Value for Cost (8/10):** At £399 (~$540 USD), the course is more expensive than some other entry-level certifications, but the structured labs, full curriculum, and practical exam justify the investment.  
 - **Study Requirements (6/10):** Requires steady effort to complete all 315 topics, 24 labs, and 32 quizzes, but pacing is manageable.  
 - **Industry Relevance & Accessibility (5/10):** Recognition is growing, though still limited compared to long-standing certifications.  
 
