@@ -120,21 +120,21 @@ For me, the most useful comparisons come from certifications and training that a
 
 | Category                         | Rating |
 |----------------------------------|--------|
-| Knowledge Depth                  | ★★★★★★★★☆☆ |
-| Real-World Applicability         | ★★★★★★★★★☆ |
-| Value for Cost                   | ★★★★★★★★★☆ |
-| Study Requirements               | ★★★★★★★☆☆☆ |
-| Industry Relevance & Accessibility | ★★★★★★★★☆☆ |
+| Knowledge Depth                  | ★★★★★☆☆☆☆☆ |
+| Real-World Applicability         | ★★★★★★★☆☆☆ |
+| Value for Cost                   | ★★★★★★★★☆☆ |
+| Study Requirements               | ★★★★★★☆☆☆☆ |
+| Industry Relevance & Accessibility | ★★★★★☆☆☆☆☆ |
 
-**Overall Score: 8.5/10**
+**Overall Score: 6.5/10**
 
-- **Knowledge Depth (★★★★★★★★☆☆):** Covers a wide range of defensive skills across eight domains, providing a strong foundation without diving into deep specialization.  
-- **Real-World Applicability (★★★★★★★★★☆):** The exam replicates actual SOC workflows, making the learning directly transferable.  
-- **Value for Cost (★★★★★★★★★☆):** At $540, the combination of content, labs, and certification provides excellent value.  
-- **Study Requirements (★★★★★★★☆☆☆):** Requires a consistent commitment. I completed the entire course in 25 days of steady work, supported by detailed note-taking.  
-- **Industry Relevance & Accessibility (★★★★★★★★☆☆):** Recognition continues to grow, making it a valuable addition to a blue team career path.  
+- **Knowledge Depth (5/10):** Covers eight domains with strong breadth, but remains foundational rather than deep.  
+- **Real-World Applicability (7/10):** Practical labs and exam tasks simulate SOC workflows, making skills directly transferable.  
+- **Value for Cost (8/10):** At ~£399 (~$540 USD), the course is more expensive than some other entry-level certifications, but the structured labs, full curriculum, and practical exam justify the investment.  
+- **Study Requirements (6/10):** Requires steady effort to complete all 315 topics, 24 labs, and 32 quizzes, but pacing is manageable.  
+- **Industry Relevance & Accessibility (5/10):** Recognition is growing, though still limited compared to long-standing certifications.  
 
-*Note: I rated this certification higher than some others I’ve reviewed because of its balance of affordability, breadth of coverage, and practical exam design. While it doesn’t offer the same deep specialization or long-standing industry recognition as SANS certifications, it delivers exceptional value as a well-rounded and truly hands-on entry-level certification.*
+*Note: I rated this certification higher in applicability and value because of its practical exam and structured labs. Its introductory depth and limited recognition keep it from scoring higher overall.*
 
 ## Final Thoughts
 For me, the Blue Team Level 1 certification was a practical, structured, and fair way to validate defensive security skills. The eight domains ensured that I didn’t just memorize concepts but actively worked through them. By the time I reached the exam, I had completed all 315 topics, 24 labs, and 32 quizzes, leaving me confident in both the material and the process.  
