@@ -2,7 +2,7 @@
 title: "OffSec TH-200 & OSTH Certification Review"
 date: 2025-08-19 00:00:00 +0000
 categories:
-  - Reviews
+  - Course & Certification Reviews
 tags:
   - OffSec
   - OSTH

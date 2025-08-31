@@ -2,7 +2,7 @@
 title: "Practical Web Application Security and Testing (PWST) Review"
 date: 2025-08-05 00:00:00 +0000
 categories:
-  - Course Reviews
+  - Course & Certification Reviews
 tags:
   - PWST
   - TCM

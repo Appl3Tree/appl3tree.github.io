@@ -3,7 +3,7 @@ description: Appl3Tree's detailed review of OffSec's IR-200 course and OSIR cert
 title: OffSec IR-200 & OSIR Certification Review
 date: 2025-07-09 00:00:00 +0000
 categories:
-  - Certification Reviews
+  - Course & Certification Reviews
 tags:
   - OffSec
   - OSIR

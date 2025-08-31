@@ -3,7 +3,7 @@ description: Appl3Tree's review of the ACP certification offered by APISec Unive
 title: ACP Certification Review - APISec University
 date: 2025-06-09 23:00:00 -0600
 categories:
-  - Certification Reviews
+  - Course & Certification Reviews
 tags:
   - ACP
   - apisec

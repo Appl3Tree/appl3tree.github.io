@@ -3,7 +3,7 @@ description: Appl3Tree's review of the CASA certification offered by APISec Univ
 title: CASA Certification Review - APISec University
 date: 2025-06-09 22:00:00 -0600
 categories:
-  - Certification Reviews
+  - Course & Certification Reviews
 tags:
   - CASA
   - apisec
