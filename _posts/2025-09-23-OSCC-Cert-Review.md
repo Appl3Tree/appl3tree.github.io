@@ -148,7 +148,7 @@ Overall, I finished with time to spare. Others have since reported needing nearl
 SEC-100/OSCC-Sec belongs in the conversation with other **entry-level or junior certifications**. What sets it apart is its **blend of Attack, Defend, and Build** rather than focusing solely on one lane.  
 
 - **Foundational Broad Coverage**: Security+, ISC2 CC, Google Cybersecurity Certificate, SANS SEC275.  
-- **Practical Offensive**: PT1, PWPT, PJPT, eJPT.  
+- **Practical Offensive**: PT1, PJPT, eJPT.  
 - **Defensive Training**: BTL1.  
 - **Theoretical Pentest-Oriented**: PenTest+, CEH.  
 
@@ -160,7 +160,6 @@ SEC-100/OSCC-Sec belongs in the conversation with other **entry-level or junior 
 | PT1                  | TryHackMe | $349 | Practical pentest fundamentals; hands-on, focused scope |
 | PenTest+             | CompTIA  | $1,319 | Theoretical, multiple-choice; covers network/AD, less hands-on |
 | CEH                  | EC-Council | $650 | Theoretical, industry name recognition; criticized for shallow labs |
-| PWPT                 | TCM Security | $499 | Practical, offensive focus; narrower than OSCC-Sec |
 | PJPT                 | TCM Security | $249 | Practical junior pentest cert; accessible and affordable |
 | eJPT                 | INE       | $249 | Practical, junior-level pentest cert; stronger offensive depth |
 | Security+            | CompTIA  | $392 (exam) | Broad intro, industry baseline; multiple-choice only |
