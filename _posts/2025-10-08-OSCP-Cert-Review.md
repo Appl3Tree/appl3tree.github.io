@@ -61,13 +61,11 @@ PEN-200 is delivered through OffSec’s Learn portal, combining interactive writ
 26. Assembling the Pieces  
 27. Trying Harder: The Challenge Labs  
 
-*(As of October 2025, newer versions also include additional Phishing and Extra Mile Cloud modules.)*
-
 ### Lab Environment
 The PEN-200 lab environment remains one of the strongest aspects of the course. It features a diverse, interconnected network of Linux, Windows, web, and Active Directory systems designed to reinforce real-world workflows such as pivoting, privilege escalation, and chained exploitation. The Challenge Labs at the end of the course function as a bridge to the exam, encouraging the application of every previously learned technique.
 
 For this review’s study path, the structured approach included completing the full PEN-200 course, then progressing through the Challenge Labs before supplementing with curated Hack The Box machines mapped to OSCP-relevant skill areas. The specific external resources used for that mapping were [TJ_Null’s preparation guide](https://www.netsecfocus.com/oscp/2021/05/06/The_Journey_to_Try_Harder-_TJnull-s_Preparation_Guide_for_PEN-200_PWK_OSCP_2.0.html) and [LainKusanagi’s OSCP-like machine spreadsheet](https://docs.google.com/spreadsheets/d/18weuz_Eeynr6sXFQ87Cd5F0slOj9Z6rt/).  
-Due to life constraints, I completed only the first five Challenge Labs—commonly regarded as the most critical for exam readiness—were prior to sitting the exam and passing.
+Due to life constraints, I completed only the first five Challenge Labs, commonly regarded as the most critical for exam readiness, prior to sitting the exam and passing.
 
 ## Exam Overview
 The **OSCP exam** consists of a **24-hour hands-on assessment** followed by a **24-hour reporting window**. Candidates must compromise multiple targets across varied environments—typically standalone systems, web applications, and an Active Directory network—to collect proof files totaling 100 points. A minimum of 70 points is required to pass.
@@ -138,5 +136,6 @@ Rising alternatives such as **PNPT** and **CPTS** are reshaping expectations. Ma
 
 Despite the higher cost and preparation intensity, PEN-200 delivers exceptional educational and professional value. Its labs, methodology, and enduring credibility ensure that OSCP remains the certification most closely associated with real-world pentesting skill.
 
-## Closing Note
+---
+
 *AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*
