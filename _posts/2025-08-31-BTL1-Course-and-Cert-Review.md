@@ -145,4 +145,4 @@ This certification is not meant to be the final word in defensive training, but 
 
 ---
 
-*AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*
+> *Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*
