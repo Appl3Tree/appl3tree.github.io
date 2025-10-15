@@ -131,4 +131,4 @@ If you want a targeted offensive wireless credential that proves you can capture
 
 ---
 
-> *AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*  
+> *Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*  
