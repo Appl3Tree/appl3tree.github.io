@@ -138,4 +138,4 @@ Despite the higher cost and preparation intensity, PEN-200 delivers exceptional 
 
 ---
 
-*AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*
+> *Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*
