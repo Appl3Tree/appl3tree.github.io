@@ -132,4 +132,4 @@ Although IR‑200 is significantly shorter (~37 hours) than SOC‑200 (~277 hour
 
 ---
 
-> Note: AI-assisted editing was used only for grammar, formatting, and consistency. All opinions are my own based on official OffSec documentation.
+> _Note: AI-assisted editing was used only for grammar, formatting, and consistency. All opinions are my own based on official OffSec documentation._

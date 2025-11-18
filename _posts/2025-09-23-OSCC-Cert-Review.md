@@ -225,4 +225,4 @@ In short: **a great starting point, but not an endpoint.** It provides the scaff
 
 ---
 
-> *Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.*
+> _Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original._

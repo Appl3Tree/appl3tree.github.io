@@ -211,5 +211,5 @@ Although additional architectural variety and deeper multi-stage exploitation wo
 
 ---
 
-AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.
+> _Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original._
 
