@@ -1,5 +1,5 @@
 ---
-title: "API Penetration Testing & ASCP Certification Review"
+title: "API Penetration Testing Course & ASCP Certification Review"
 date: 2025-11-17 00:00:00 +0000
 categories:
   - Course & Certification Reviews
