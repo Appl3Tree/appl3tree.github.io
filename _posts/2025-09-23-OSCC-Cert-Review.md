@@ -166,7 +166,7 @@ SEC-100/OSCC-Sec belongs in the conversation with other **entry-level or junior 
 | ISC2 CC              | ISC2      | Free–$199 | Broad, theory-focused, beginner-friendly |
 | Google Cybersecurity | Coursera  | $39/month | MOOC, non-proctored, beginner-focused |
 | BTL1                 | Security Blue Team | £399 (~$540) | Hands-on defensive labs, SOC focus |
-| SANS SEC275          | SANS      | $7,020 | Deep, premium foundational course; strong but very costly |
+| SANS SEC275          | SANS      | $999 | Deep, premium foundational course |
 
 ---
 
@@ -178,7 +178,7 @@ When ranking OSCC-Sec against other certifications, the **price-to-worth ratio**
 - **Balanced Mid-Tier**: BTL1 (~$540) offers practical defensive content, while Security+ ($392) provides strong recognition though it lacks labs.  
 - **High-Recognition Theory**: ISC2 CC (free–$199) and Security+ are great for resumes but won’t give you real hands-on skills.  
 - **Overpriced for Depth**: PenTest+ ($1,319) and CEH ($650) cost more than they deliver, and many reviewers note they feel outdated.  
-- **Ultra-Premium**: SANS SEC275 ($7,020) is comprehensive but financially out of reach for most.  
+- **Ultra-Premium**: SANS SEC275 ($999) is comprehensive but _was_ financially out of reach for most. At the current price, this is very comparable to the SEC-100 by OffSec.  
 
 **OSCC-Sec at $899** sits near the premium tier. Yes, it’s more expensive than almost all its peers. But for that cost you’re getting:  
 - A year of access  
