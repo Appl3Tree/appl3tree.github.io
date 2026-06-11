@@ -224,4 +224,4 @@ From a technical perspective, the course does an excellent job demonstrating the
 
 Overall, I would recommend FOR572 and GNFA to incident responders, threat hunters, SOC analysts, and DFIR practitioners who already possess a solid networking foundation. The course is demanding, expensive, and information-dense, but it covers material that remains highly relevant to real-world investigations. For the right audience, the specialization is exactly what makes it valuable.
 
-> Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original.
+> Note: AI-assisted editing was used to improve grammar, clarity, and formatting. All technical content and opinions are original._
